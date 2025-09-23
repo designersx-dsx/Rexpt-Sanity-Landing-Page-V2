@@ -1,0 +1,58 @@
+.containerBox {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marqueeTrack {
+    display: flex;
+    width: max-content;
+
+}
+
+.marqueeTrack img {
+    width: 100%;
+}
+
+
+.UpperDiv {
+    width: 100%;
+    max-width: 1650px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+}
+
+.LeftSection {
+    width: 50%;
+}
+
+.ContentDiv {
+    padding-left: 20px;
+}
+
+.Title {
+    font-size: clamp(32px, 4.7vw, 90px);
+    margin: 0;
+}
+
+
+.Description {
+    font-size: 18px;
+    width: 70%;
+}
+
+.BtnDiv {
+    margin-top: 2rem;
+}
+
+.RightSection {
+    width: 50%;
+}
+
+.RightImg img {
+    width: 100%;
+}

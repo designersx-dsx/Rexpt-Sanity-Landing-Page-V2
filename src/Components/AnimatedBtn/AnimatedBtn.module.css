@@ -1,0 +1,65 @@
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.btn img {
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.btn p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    pointer-events: none;
+
+}
+
+/* Shine effect pseudo element */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-25deg);
+}
+
+.btn:hover {
+    transform: scale(1.02);
+
+}
+
+.btn:hover::before {
+    animation: shine 0.8s forwards;
+}
+
+/* Shine animation */
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
