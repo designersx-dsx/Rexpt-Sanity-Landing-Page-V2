@@ -1,20 +1,20 @@
 .btn {
     position: relative;
     display: inline-flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.4s ease;
 }
 
-.btn img {
-    height: auto;
+.shape {
     display: block;
-    cursor: pointer;
-    transition: transform 0.4s ease;
+    height: auto;
+    width: 100%;
 }
 
+/* Default centered text */
 .btn p {
     position: absolute;
     top: 50%;
@@ -26,10 +26,34 @@
     margin: 0;
     white-space: nowrap;
     pointer-events: none;
-
 }
 
-/* Shine effect pseudo element */
+/* Flex content (text2 + logo) inside shape */
+.flexContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    pointer-events: none;
+}
+
+.flexContent .logo {
+    /* width: 28px;
+    height: 28px; */
+    object-fit: contain;
+}
+
+.flexContent span {
+    font-size: 40px;
+    /* font-weight: 500; */
+    /* color: #fff; */
+    font-style: italic;
+}
+
+/* Shine effect */
 .btn::before {
     content: "";
     position: absolute;
@@ -46,19 +70,16 @@
 
 .btn:hover {
     transform: scale(1.02);
-
 }
 
 .btn:hover::before {
     animation: shine 0.8s forwards;
 }
 
-/* Shine animation */
 @keyframes shine {
     0% {
         left: -75%;
     }
-
     100% {
         left: 125%;
     }

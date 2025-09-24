@@ -6,3 +6,137 @@
     margin-inline: auto;
     text-align: center;
 }
+
+.sliderWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1010px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.sliderContainer {
+    position: relative;
+    height: 420px;
+    overflow: visible;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+    transform: translateY(150px) scale(0.9);
+    /* hidden slides start below */
+    z-index: 0;
+    color: #fff;
+    background: #000;
+    /* default */
+}
+
+.cardFlex {
+    width: 100%;
+
+}
+
+.textSection {
+    width: 70%;
+    margin-right: 2rem;
+}
+
+.textSection p {
+    font-size: 24px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    width: 80%;
+}
+
+.textSection span {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.imageSection {
+    width: 30%;
+}
+
+.imageSection img {
+    width: 100%;
+    /* height: 220px; */
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Current slide */
+.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    z-index: 10;
+}
+
+/* Next slide coming from below */
+.next {
+    opacity: 1;
+    transform: translateY(-40px) scale(0.96);
+    z-index: 5;
+}
+
+/* Second next behind */
+.next2 {
+    opacity: 0.8;
+    transform: translateY(-80px) scale(0.92);
+    z-index: 3;
+}
+
+/* Slide exiting (goes down) */
+.hidden {
+    opacity: 0;
+    transform: translateY(-150px) scale(0.9);
+    z-index: 0;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8em;
+    gap: 1.2rem;
+    cursor: pointer;
+}
+
+.controls button {
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+
+.BothBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls button:hover {
+    background: #F5F5F5;
+
+}

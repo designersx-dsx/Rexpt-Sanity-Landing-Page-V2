@@ -27,6 +27,7 @@ const YourAdvantage = () => {
                             <div className={styles.BottomContaint}>
                                 <div className={styles.btn}>
                                     <img src='/Svg/join-btn.svg' alt='join-btn' />
+                                    
                                 </div>
                                 <div>
                                     <p className={styles.subText}>Calls Handled Daily</p>

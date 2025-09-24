@@ -2,6 +2,11 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    height: 100vh;
+    background: url('/public/Svg/strip-img.svg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+
 }
 
 .marqueeTrack {
@@ -17,23 +22,24 @@
 
 .UpperDiv {
     width: 100%;
-    max-width: 1650px;
+    max-width: 1400px;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 15%;
-    right: 0;
+    /* margin-top: 8%; */
+
+
+
 }
 
 .LeftSection {
     width: 40%;
+    align-items: center;
+    display: flex
 }
 
 .ContentDiv {
     /* padding-left: 20px; */
     position: absolute;
-    width: 55%;
+    width: 50%;
 }
 
 .Title {
@@ -56,10 +62,35 @@
 
 .RightSection {
     width: 60%;
+    align-items: end;
+    display: flex;
+}
+
+.RightImg {
+    position: absolute;
+    right: 0;
+    text-align: end;
 }
 
 .RightImg img {
     width: 100%;
+}
+
+@media (max-width : 1600px) {
+    .RightImg img {
+        width: 75%;
+    }
+     .Title {
+        line-height: 70px;
+    }
+
+}
+
+@media (max-width : 1400px) {
+    .RightImg img {
+        width: 60%;
+    }
+
 }
 
 

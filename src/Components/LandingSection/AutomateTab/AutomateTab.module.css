@@ -6,7 +6,7 @@
     width: 100%;
     max-width: 1400PX;
     margin-inline: auto;
-    margin-block: 1rem 5rem;
+    margin-block: 1rem 1.5rem;
 }
 
 .LeftBar {
@@ -43,7 +43,7 @@
 }
 
 .tabsWrapper {
-    padding: 20px;
+    padding: 8rem 0px 0px 0px;
 }
 
 .tabNav {
@@ -62,7 +62,7 @@
     font-size: 27px;
     cursor: pointer;
     color: #818181;
-    position: relative;   
+    position: relative;
     font-family: 'Arboria Medium';
 }
 
@@ -82,7 +82,7 @@
 
 .tabButton.active {
     color: #6524EB;
-   
+
 }
 
 .tabButton.active::after {
@@ -97,7 +97,7 @@
     max-width: 1400px;
     margin-inline: auto;
     gap: 40px;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .left {
@@ -107,17 +107,19 @@
 .left h2 {
     font-size: 40px;
     font-weight: 800;
-    color: 24252C;
-    margin-bottom: 20px;
+    color: #24252C;
+    margin-bottom: 2rem;
+    width: 95%;
+    font-family: 'Arbotek black';
 }
 
 .features {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    background-image: repeating-linear-gradient(to right, #ccc, #ccc 4px, transparent 12px, transparent 18px);
+    gap: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    background-image: repeating-linear-gradient(to right, #C2C2C2, #C2C2C2 6px, transparent 0px, transparent 15px);
     background-position: bottom;
     background-size: 100% 1px;
     background-repeat: no-repeat;
@@ -126,7 +128,7 @@
 .featureItem {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 18px;
 }
 
 .icon {
@@ -139,7 +141,7 @@
 .quotediv {
     display: flex;
     align-items: baseline;
-    gap: 10px;
+    gap: 18px;
 }
 
 .quote {
@@ -147,7 +149,8 @@
     color: #24252C;
     margin-bottom: 15px;
     font-weight: 600;
-    font-family: "Lato", sans-serif;
+    font-family: 'Arbotek bold';
+    margin-top: 0;
 
 }
 
@@ -160,11 +163,9 @@
 
 .link {
     color: #6524EB;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 22px;    
     text-decoration: none;
-    display: inline-block;
-    font-family: "Lato", sans-serif;
+    display: inline-block;     
     margin-block: 2rem;
 }
 
