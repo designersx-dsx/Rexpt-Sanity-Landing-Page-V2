@@ -81,7 +81,7 @@ const AutomateTab = () => {
                     title="Seamlessly in real time."
                 />
                 <div className={styles.RightBar}>
-                    <h3 className={styles.RightDesc}>Experience the full workflow—how Rexpt listens, understands, and delivers solutions seamlessly.</h3>
+                    <p className={styles.RightDesc}>Experience the full workflow—how Rexpt listens, understands, and delivers solutions seamlessly.</p>
                 </div>
 
             </div>

@@ -6,7 +6,7 @@
 
 .marqueeTrack {
     display: flex;
-    width: max-content;
+    width: 100%;
 
 }
 
@@ -27,22 +27,27 @@
 }
 
 .LeftSection {
-    width: 50%;
+    width: 40%;
 }
 
 .ContentDiv {
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    position: absolute;
+    width: 55%;
 }
 
 .Title {
     font-size: clamp(32px, 4.7vw, 90px);
     margin: 0;
+    font-family: 'Arbotek black';
+    line-height: 90px;
 }
 
 
 .Description {
     font-size: 18px;
     width: 70%;
+    line-height: 26px;
 }
 
 .BtnDiv {
@@ -50,9 +55,16 @@
 }
 
 .RightSection {
-    width: 50%;
+    width: 60%;
 }
 
 .RightImg img {
     width: 100%;
+}
+
+
+@media (max-width : 600px) {
+    .Title {
+        line-height: normal;
+    }
 }

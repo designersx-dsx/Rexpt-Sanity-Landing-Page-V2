@@ -59,6 +59,19 @@ body {
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Arbotek black';
+  src: url('/public/Fonts/fonnts.com-Arboria_Black.otf') format('opentype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arbotek bold';
+  src: url('/public/Fonts/fonnts.com-Arboria_Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 body {
   font-family: 'Arboria Medium', sans-serif;
@@ -73,6 +86,7 @@ h6 {
   color: #24252c;
   margin: 0;
       font-weight: 500;
+      font-family: 'Arbotek bold';
 }
 
 :root {
