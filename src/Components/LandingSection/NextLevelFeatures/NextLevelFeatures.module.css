@@ -1,14 +1,14 @@
 /* NextLevelFeatures.module.css */
 .containerBox {
-    padding-inline: 20px;
+   padding: 8rem 0px 0px 0px;
 }
 
 .GridSection {
-    max-width: 1400px;
+    max-width: 1300px;
     margin-inline: auto;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    padding: 3rem;
+    padding: 50px;
     margin-top: 2rem;
     display: grid;
     gap: 20px;
@@ -74,6 +74,8 @@
     cursor: pointer;
     font-weight: 500;
     transition: opacity 0.4s ease;
+    font-size: 16px;
+    font-family: 'Arbotek bold';
 }
 
 .btn.show {
@@ -109,7 +111,7 @@
 .specialTitle {
     font-size: clamp(40px, 5vw, 105px);
     color: #24252C;
-    -webkit-text-stroke: 2px #24242C;
+    font-family: 'Arbotek black';
     text-align: center;
     margin: 0;
     font-weight: 800;
