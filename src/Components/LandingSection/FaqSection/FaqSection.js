@@ -33,6 +33,7 @@ const FaqSection = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
+    
     const toggleAccordion = (index) => {
         setActiveIndex(index === activeIndex ? null : index);
     };
