@@ -1,0 +1,87 @@
+.TitleBarDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.card {
+    background: linear-gradient(180deg, #ffffff, #f8f6ff);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardPrimary {
+    background: linear-gradient(180deg, #7d4eff, #7d4eff);
+    color: #fff;
+}
+
+.icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 28px;
+    height: 28px;
+}
+
+.icon img {
+    width: 100%;
+    height: auto;
+}
+
+.bigText {
+    font-size: 52px;
+    font-weight: 800;
+    margin: 40px 0 10px;
+}
+
+.percent {
+    font-size: 38px;
+    font-weight: 700;
+    color: #5a3efc;
+    margin: 40px 0 10px;
+}
+
+.subText {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: #666;
+}
+
+.cardPrimary .subText {
+    color: #e2e2e2;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 8px 16px;
+    border: none;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
