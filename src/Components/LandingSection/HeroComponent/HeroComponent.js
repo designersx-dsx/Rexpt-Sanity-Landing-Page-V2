@@ -11,7 +11,7 @@ const HeroComponent = () => {
         <div className={styles.LeftSection}>
           <div className={styles.ContentDiv}>
             <h1 className={styles.Title}>Never Miss a Call Never Miss a Client</h1>
-            <p className={styles.Description}>Conversations designed to move your business forward, with AI precision and human expertise.</p>
+            <p className={styles.Description}>Ensure quality leads and bookings as agents handle calls, deliver high-quality appointments, and seamlessly integrate with your current system for streamlined operations.</p>
             <div className={styles.BtnDiv}>
               <AnimatedBtn text="Get Started for FREE" />
             </div>
