@@ -5,7 +5,7 @@
   text-align: center;
   padding: 0 1rem;
   margin-inline: auto;
-  margin-block: 5rem;
+  
   background: url("/public/Svg/slider-bg.png")no-repeat;   
   background-size: auto; 
   border-radius: 20px;  
@@ -42,7 +42,7 @@
 .slide img {
   width: 100%;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 50px;
   border: 18px solid #fff;
   box-shadow: rgb(17 17 26 / 10%) 0px 6px 35px 18px, rgb(17 17 26 / 0%) 0px 6px 35px 18px, rgb(17 17 26 / 0%) 0px 6px 35px 18px;
 }
@@ -98,7 +98,7 @@
 
 .tag {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 2px 12px 4px 12px;
   font-size: 20px;
   color: #fff;
   background: #6c47ff;
@@ -109,19 +109,29 @@
 .content h2 {
   font-size: 28px;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .content p {
   font-size: 30px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
   margin-block: 10px;
+ 
+}
+.content .LightFont  {  
+  font-family: 'Arbotek Light';
+}
+
+.content .CardDisc{
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .boldtext {
   font-size: 60px;
-  -webkit-text-stroke: 2px #24242C;
+  font-family: 'Arbotek black';
   color: #24242C;
   font-weight: bold;
   letter-spacing: 1px;

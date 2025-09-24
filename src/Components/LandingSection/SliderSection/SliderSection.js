@@ -55,11 +55,11 @@ const CardSlider = () => {
 
           <span className={styles.tag}>{slides[active].title}</span>
           <h2>{slides[active].subtitle}</h2>
-          <p>
+          <p className={styles.LightFont}>
             {slides[active].maindes.split(" ").slice(0, -1).join(" ")}{" "}
             <span className={styles.boldtext}>{slides[active].maindes.split(" ").slice(-1)}</span>
           </p>
-          <p>{slides[active].desc}</p>
+          <p className={styles.CardDisc}>{slides[active].desc}</p>
 
           <div className={styles.arrowLeft} onClick={prevSlide}>
             <img src="/Svg/left-arrow.svg" alt="right-arrow" />
