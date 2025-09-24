@@ -4,9 +4,9 @@ import AnimatedBtn from '../../AnimatedBtn/AnimatedBtn'
 const HeroComponent = () => {
   return (
     <div className={styles.containerBox}>
-      <div className={styles.marqueeTrack}>
+      {/* <div className={styles.marqueeTrack}>
         <img src="/Svg/strip-img.svg" alt="strip-img" />
-      </div>
+      </div> */}
       <div className={styles.UpperDiv}>
         <div className={styles.LeftSection}>
           <div className={styles.ContentDiv}>

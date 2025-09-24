@@ -6,13 +6,10 @@
   padding: 0 1rem;
   margin-inline: auto;
   margin-block: 5rem;
-
-  /* Background image */
-  background: url("/public/Svg/slider-bg.png");
-  background-size: cover;
-  /* Image will cover whole area */
-  border-radius: 20px;
-  /* Optional: rounded background */
+  background: url("/public/Svg/slider-bg.png")no-repeat;   
+  background-size: auto; 
+  border-radius: 20px;  
+  margin-top: 8rem; 
 }
 
 .TitleBarDiv {
