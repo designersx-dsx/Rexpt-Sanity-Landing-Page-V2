@@ -62,6 +62,7 @@
     width: 100%;
 }
 
+
 @media (max-width : 600px) {
     .Title {
         line-height: normal;

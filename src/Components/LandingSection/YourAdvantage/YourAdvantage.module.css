@@ -10,32 +10,43 @@
 .container {
     display: grid;
     grid-template-columns: 50% 25% 25%;
-    gap: 20px;
+    gap: 25px;
     width: 100%;
     max-width: 1400px;
     margin-inline: auto;
+    margin-bottom: 8rem;
 }
 
 .card {
-    background: linear-gradient(180deg, #ffffff, #f8f6ff);
-    border-radius: 20px;
-    padding: 30px 20px;
+    background: url("/public/Images/light-strip.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    padding: 30px;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .cardPrimary {
-    background: linear-gradient(180deg, #7d4eff, #7d4eff);
+    background: url("/public/Images/purpol-strip.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
     color: #fff;
 }
 
+.contentdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+}
+
 .icon {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 28px;
-    height: 28px;
+    width: 65px;
+    height: 65px;
 }
 
 .icon img {
@@ -44,37 +55,54 @@
 }
 
 .bigText {
-    font-size: 52px;
+    font-size: clamp(40px, 15vw, 258px);
     font-weight: 800;
     margin: 40px 0 10px;
+    color: #BD9DFF;
 }
 
 .percent {
-    font-size: 38px;
+    font-size: 100px;
     font-weight: 700;
-    color: #5a3efc;
+    color: #6524EB;
     margin: 40px 0 10px;
 }
 
 .subText {
-    font-size: 16px;
+    font-size: 35px;
     font-weight: 500;
     margin-top: 5px;
-    color: #666;
+    text-align: end;
 }
 
+.subText2 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 5px;
+    text-align: left;
+    color: #6524EB;
+    width: 90%;
+    margin-bottom: 0px;
+}
+
+
 .cardPrimary .subText {
-    color: #e2e2e2;
+    color: #BD9DFF;
+    width: 90%;
+}
+
+.BottomContaint {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
 }
 
 .btn {
     margin-top: 25px;
-    padding: 8px 16px;
     border: none;
-    background: #fff;
     color: #333;
-    font-size: 14px;
-    border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
 }
