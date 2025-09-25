@@ -6,6 +6,7 @@ import NextLevelFeatures from '../../Components/LandingSection/NextLevelFeatures
 import SliderSection from '../../Components/LandingSection/SliderSection/SliderSection'
 import YourAdvantage from '../../Components/LandingSection/YourAdvantage/YourAdvantage'
 import ClientsSay from '../../Components/LandingSection/ClientsSay/ClientsSay'
+import FaqSection from '../../Components/LandingSection/FaqSection/FaqSection'
 const LandingPage = () => {
     return (
         <>
@@ -16,6 +17,7 @@ const LandingPage = () => {
             <SliderSection/>
             <YourAdvantage/>
             <ClientsSay/>
+            <FaqSection/>
 
         </>
     )
