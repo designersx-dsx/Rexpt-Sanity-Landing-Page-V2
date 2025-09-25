@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from '../SliderSection/SliderSection.module.css'
 import TitleBar from "../../TitleBar/TitleBar";
 
@@ -9,10 +9,11 @@ const CardSlider = () => {
     { id: 3, img: "Images/Slider3-Img.png", title: "Lead Recovery", subtitle: "Capture missed & after-hours callers", maindes: "Up to 3× leads", desc: "Answer after-hours, auto-callback missed numbers, qualify intent, and route hot prospects to staff or instant calendar booking." },
     { id: 4, img: "Images/Slider4-Img.png", title: "Peak-Hour Control", subtitle: "Handle call spikes without holds", maindes: "Up to 50% dropout", desc: "Parallel answering absorbs call spikes, triages intent, books fast, and escalates urgent cases, reducing holds and abandons." },
     { id: 5, img: "Images/Slider5-Img.png", title: "Team Efficiency", subtitle: "Time back for your staff", maindes: "Up to 10+ hrs/week", desc: "Offload FAQs and scheduling so staff focus on customers, while notes sync to calendar, CRM, and POS automatically." },
-    { id: 5, img: "Images/Slider6-Img.png", title: "Savings Driver", subtitle: "Reduce operational costs", maindes: "Up to 80 %", desc: "Automate answers and booking to replace repetitive calls, reduce staffing costs, and scale coverage without hiring." },
+    { id: 6, img: "Images/Slider6-Img.png", title: "Savings Driver", subtitle: "Reduce operational costs", maindes: "Up to 80 %", desc: "Automate answers and booking to replace repetitive calls, reduce staffing costs, and scale coverage without hiring." },
   ];
 
   const [active, setActive] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const prevSlide = () => {
     setActive((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -22,12 +23,25 @@ const CardSlider = () => {
     setActive((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
+  // autoplay effect
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 3000); 
+      return () => clearInterval(interval);
+    }
+  }, [isPaused, active]);
+
   return (
-    <div className={styles.wrapper}>
+    <div 
+      className={styles.wrapper}
+      onMouseEnter={() => setIsPaused(true)} 
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className={styles.TitleBarDiv}>
         <TitleBar subTitle="Key Performance" spanText="Highlights" title="Driving Better Results, Faster" />
       </div>
-
 
       <div className={styles.slider}>
         {slides.map((item, index) => {
@@ -48,12 +62,10 @@ const CardSlider = () => {
             </div>
           );
         })}
-
       </div>
 
       <div className={styles.contentMain}>
         <div className={styles.content}>
-
           <span className={styles.tag}>{slides[active].title}</span>
           <h2>{slides[active].subtitle}</h2>
           <p className={styles.LightFont}>
@@ -65,16 +77,13 @@ const CardSlider = () => {
           <p className={styles.CardDisc}>{slides[active].desc}</p>
 
           <div className={styles.arrowLeft} onClick={prevSlide}>
-            <img src="/Svg/left-arrow.svg" alt="right-arrow" />
+            <img src="/Svg/left-arrow.svg" alt="left-arrow" />
           </div>
           <div className={styles.arrowRight} onClick={nextSlide}>
             <img src="/Svg/right-arrow.svg" alt="right-arrow" />
           </div>
         </div>
       </div>
-
-
-
     </div>
   );
 };

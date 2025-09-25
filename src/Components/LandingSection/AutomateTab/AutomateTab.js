@@ -105,7 +105,7 @@ const AutomateTab = () => {
                     <div className={styles.features}>
                         {tabData[activeTab].features.map((f, i) => (
                             <div key={i} className={styles.featureItem}>
-                                <span className={styles.icon}><img src={f.icon} /></span>
+                                <span className={styles.icon}><img src={f.icon}  alt='icon'/></span>
                                 <span>{f.text}</span>
                             </div>
                         ))}
