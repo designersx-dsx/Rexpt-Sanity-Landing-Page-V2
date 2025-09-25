@@ -35,7 +35,17 @@ const NextLevelFeatures = () => {
                     className={`${styles.card} ${styles.specialCard}`}
                     style={{ backgroundImage: item.gradient, border: `2px solid ${item.borderColor}` }}
                 >
-                    <h1 className={styles.specialTitle}>{item.title}</h1>
+                    {/* <h1 className={styles.specialTitle}>{item.title}</h1> */}
+                    <h1 className={styles.specialTitle} >
+                        <span>F</span>
+                        <span>E</span>
+                        <span>A</span>
+                        <span>T</span>
+                        <span>U</span>
+                        <span>R</span>
+                        <span>E</span>
+                        <span>S</span>
+                    </h1>
                 </div>
             )
         }

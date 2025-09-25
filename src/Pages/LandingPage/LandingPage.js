@@ -7,6 +7,8 @@ import SliderSection from '../../Components/LandingSection/SliderSection/SliderS
 import YourAdvantage from '../../Components/LandingSection/YourAdvantage/YourAdvantage'
 import ClientsSay from '../../Components/LandingSection/ClientsSay/ClientsSay'
 import FaqSection from '../../Components/LandingSection/FaqSection/FaqSection'
+import CustomerExperience from '../../Components/LandingSection/CustomerExperience/CustomerExperience'
+import Footer from '../../Components/Footer/Footer'
 const LandingPage = () => {
     return (
         <>
@@ -18,6 +20,8 @@ const LandingPage = () => {
             <YourAdvantage/>
             <ClientsSay/>
             <FaqSection/>
+            <CustomerExperience/>
+            <Footer/>
 
         </>
     )
