@@ -28,6 +28,7 @@ const CardSlider = () => {
         <TitleBar subTitle="Key Performance" spanText="Highlights" title="Driving Better Results, Faster" />
       </div>
 
+
       <div className={styles.slider}>
         {slides.map((item, index) => {
           let position = "";
