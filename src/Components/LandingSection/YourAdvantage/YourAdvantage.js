@@ -9,9 +9,9 @@ const YourAdvantage = () => {
             <div className={styles.containerBox}>
                 <div className={styles.TitleBarDiv}>
                     <TitleBar
-                        subTitle="Our Impact,"
-                        spanText="Your Advantage"
-                        title="Transforming Business Communications"
+                        subTitle="What Our,"
+                        spanText="Clients Say"
+                        title="Hear from Those Who Chose Rexpt"
                     />
                 </div>
                 <div className={styles.container}>
@@ -51,10 +51,10 @@ const YourAdvantage = () => {
                             </div>
                             <div>
                                 {/* <h2 className={styles.percent}>95%</h2> */}
-                                 <h2 className={styles.percent}>
+                                <h2 className={styles.percent}>
                                     <span>9</span>
                                     <span>5</span>
-                                    <span>%</span>                                  
+                                    <span>%</span>
 
                                 </h2>
                             </div>
@@ -72,10 +72,10 @@ const YourAdvantage = () => {
                             </div>
                             <div>
                                 {/* <h2 className={styles.percent}>80%</h2> */}
-                                 <h2 className={styles.percent}>
+                                <h2 className={styles.percent}>
                                     <span>8</span>
                                     <span>0</span>
-                                    <span>%</span>                                  
+                                    <span>%</span>
 
                                 </h2>
                             </div>
