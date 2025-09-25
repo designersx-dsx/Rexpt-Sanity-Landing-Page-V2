@@ -76,10 +76,7 @@ const FaqSection = () => {
 
                     </div>
                     <div className={styles.RightSection}>
-
-
                         <div className={styles.accordion}>
-
                             {faqs.map((item, index) => (
                                 <div
                                     key={index}
@@ -95,7 +92,6 @@ const FaqSection = () => {
                                             {activeIndex === index ? "−" : "+"}
                                         </span>
                                     </div>
-
                                     <div
                                         className={`${styles.contentWrapper} ${activeIndex === index ? styles.open : ""
                                             }`}
