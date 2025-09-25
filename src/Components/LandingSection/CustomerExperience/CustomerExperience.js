@@ -43,19 +43,15 @@ const CustomerExperience = () => {
                             </p>
 
                             <p>
-                                and I run a business in <input type="text" className={styles.inputFull} />
+                                and my business name is<input type="text" className={styles.inputFull} />
                             </p>
 
                             <p>
-                                My Google listing is <input type="text" className={styles.inputFull} />
-                            </p>
+                                & my my Business Category is<input type="text" className={styles.inputFull} />
+                            </p>                           
 
                             <p>
-                                and my business has <input type="text" className={styles.inputSmall} /> employees.
-                            </p>
-
-                            <p>
-                                You can reach me at Phone: <input type="text" className={styles.inputFull} />
+                                You can reach me at Phone<input type="text" className={styles.inputFull} />
                             </p>
 
                             <p>
