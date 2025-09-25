@@ -18,7 +18,7 @@ const YourAdvantage = () => {
                     {/* First Card */}
                     <div className={`${styles.card} ${styles.cardPrimary}`}>
                         <div className={styles.contentdiv}>
-                            <div className={styles.icon}>
+                            <div className={styles.icon + " " + styles.callIcon}>
                                 <img src="/Svg/call-svg.svg" alt="call" />
                             </div>
                             <div>
@@ -46,7 +46,7 @@ const YourAdvantage = () => {
                     {/* Second Card */}
                     <div className={styles.card}>
                         <div className={styles.contentdiv}>
-                            <div className={styles.icon}>
+                            <div className={styles.icon + " " + styles.starIcon}>
                                 <img src="/Svg/star-svg.svg" alt="stars" />
                             </div>
                             <div>
@@ -67,7 +67,7 @@ const YourAdvantage = () => {
                     {/* Third Card */}
                     <div className={styles.card}>
                         <div className={styles.contentdiv}>
-                            <div className={styles.icon}>
+                            <div className={styles.icon + " " + styles.costIcon}>
                                 <img src="/Svg/cost-svg.svg" alt="cost" />
                             </div>
                             <div>
