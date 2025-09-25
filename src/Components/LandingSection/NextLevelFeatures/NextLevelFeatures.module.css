@@ -109,11 +109,23 @@
 }
 
 .specialTitle {
-    font-size: clamp(40px, 5vw, 105px);
-    color: #24252C;
-    font-family: 'Arbotek black';
-    text-align: center;
-    margin: 0;
-    font-weight: 800;
-    letter-spacing: 2px;
+  font-size: clamp(40px, 5vw, 105px);
+  color: #24252C;
+  font-family: 'Arbotek black', sans-serif;
+  text-align: center;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.specialTitle span {
+  display: inline-block;
+  transition: transform 0.3s ease, font-weight 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.specialTitle span:hover {
+  transform: scale(1.3);      
+  font-weight: 900;          
+  color: #6524EB;                
 }
