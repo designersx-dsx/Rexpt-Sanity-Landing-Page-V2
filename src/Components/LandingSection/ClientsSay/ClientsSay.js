@@ -19,15 +19,15 @@ const ClientsSay = () => {
             id: 2,
             text: `“Using rexpt has saved us hours of manual work. It feels like having a professional receptionist on duty 24/7.”`,
             author: "Sarah Lee, CEO of FutureTech",
-            img: "https://i.pravatar.cc/300?img=22",
+            img: "/Images/clientslide2.png",
             bgColor: "#6524EB",
             textColor: "#ffffffff"
         },
         {
             id: 3,
             text: `“This platform is game-changing! We can finally focus on clients without worrying about missed calls.”`,
-            author: "David Wilson, Partner at LegalBridge",
-            img: "https://i.pravatar.cc/300?img=33",
+            author: "Mia Wilson, Partner at LegalBridge",
+            img: "/Images/clientslide3.png",
             bgColor: "#EEE6FF",
             textColor: "#000000"
         },

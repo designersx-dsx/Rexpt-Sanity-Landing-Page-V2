@@ -2,10 +2,8 @@
   position: relative;
   width: 100%;
   max-width: 1400px;
-  text-align: center;
-  padding: 0 1rem;
-  margin-inline: auto;
-  
+  text-align: center;  
+  margin-inline: auto;  
   background: url("/public/Svg/slider-bg.png")no-repeat;   
   background-size: auto; 
   border-radius: 20px;  

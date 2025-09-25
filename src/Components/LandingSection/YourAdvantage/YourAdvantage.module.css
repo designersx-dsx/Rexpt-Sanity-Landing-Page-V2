@@ -16,8 +16,7 @@
     gap: 25px;
     width: 100%;
     max-width: 1400px;
-    margin-inline: auto;
-    margin-bottom: 8rem;
+    margin-inline: auto;   
 }
 
 .card {
@@ -65,11 +64,11 @@
 }
 
 .percent {
-    font-size: 100px;
-    font-weight: 700;
+    font-size: 100px;   
     color: #6524EB;
     top: 65%;
     position: relative;
+    font-family: 'Arboria Medium';
 }
 
 .subText {
