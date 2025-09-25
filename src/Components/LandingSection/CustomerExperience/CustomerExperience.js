@@ -38,28 +38,31 @@ const CustomerExperience = () => {
                     </div>
                     <div className={styles.RightBar}>
                         <div className={styles.card}>
-                            <p>
-                                Hello! I’m <input type="text" className={styles.inputFull} />
-                            </p>
+                            <form className={styles.ContactForm}>
+                                <p className={styles.FormLabel}>
+                                    Hello! I’m <input type="text" className={styles.inputFull} />
+                                </p>
 
-                            <p>
-                                and my business name is<input type="text" className={styles.inputFull} />
-                            </p>
+                                <p className={styles.FormLabel}>
+                                    and my business name is<input type="text" className={styles.inputFull} />
+                                </p>
 
-                            <p>
-                                & my my Business Category is<input type="text" className={styles.inputFull} />
-                            </p>                           
+                                <p className={styles.FormLabel}>
+                                    & my Business Category is<input type="text" className={styles.inputFull} /> .
+                                </p>
 
-                            <p>
-                                You can reach me at Phone<input type="text" className={styles.inputFull} />
-                            </p>
+                                <p className={styles.FormLabel}>
+                                    You can reach me at Phone<input type="number" className={styles.inputFull} />
+                                </p>
 
-                            <p>
-                                and my email ID is <input type="email" className={styles.inputFull} />
-                            </p>
+                                <p className={styles.FormLabel}>
+                                    and my email ID is <input type="email" className={styles.inputFull} />
+                                </p>
 
+
+                            </form>
                             <div className={styles.btn}>
-                                <AnimatedBtn text='Get Started +'/>
+                                <AnimatedBtn text='Get Started +' />
                             </div>
                         </div>
                     </div>

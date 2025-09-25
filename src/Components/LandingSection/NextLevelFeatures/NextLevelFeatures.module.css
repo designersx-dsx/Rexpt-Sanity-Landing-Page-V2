@@ -6,7 +6,7 @@
 .GridSection {
     max-width: 1300px;
     margin-inline: auto;
-    border-radius: 20px;
+    border-radius: 40px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     padding: 50px;
     margin-top: 2rem;
@@ -36,7 +36,7 @@
     position: relative;
     padding: 20px;
     height: 170px;
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
