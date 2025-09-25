@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from "../FaqSection/FaqSection.module.css"
-
+import TitleBar from "../../TitleBar/TitleBar";
 const FaqSection = () => {
     const faqs = [
         {
@@ -28,21 +28,52 @@ const FaqSection = () => {
             answer:
                 "Indeed, Rexpt supports simultaneous call handling, ensuring that businesses never miss a call and each customer receives timely, automated assistance."
         },
-       
+
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    
+
     const toggleAccordion = (index) => {
         setActiveIndex(index === activeIndex ? null : index);
     };
+
+    const images = [
+        "/Images/user1.png",
+        "/Images/user2.png",
+        "/Images/user3.png",
+    ];
     return (
+
         <>
             <div className={styles.containerBox}>
                 <div className={styles.container}>
                     <div className={styles.LeftSection}>
-                        <h1>Left</h1>
+                        <div className={styles.contentDiv}>
+                            <TitleBar title="Frequently Asked Questions" marginBlock="0px 2.5rem" />
+                            <p>We understand that starting something new can bring questions. Here are some of the most common inquiries about our
+                                AI receptionist.</p>
+
+                            <div className={styles.container2}>
+                                {/* Images Section */}
+                                <div className={styles.imageGroup}>
+                                    {images.map((img, i) => (
+                                        <div className={styles.avatar} key={i}>
+                                            <img src={img} alt={`customer-${i}`} />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Text Section */}
+                                <div className={styles.textSection}>
+                                    <h2>
+                                        3 M<span className={styles.plus}>+</span>
+                                    </h2>
+                                    <p>Happy customer</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div className={styles.RightSection}>
 
