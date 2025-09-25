@@ -29,7 +29,7 @@ const YourAdvantage = () => {
                                     <img src='/Svg/join-btn.svg' alt='join-btn' />
                                     
                                 </div>
-                                <div>
+                                <div className={styles.SubTextDisc}>
                                     <p className={styles.subText}>Calls Handled Daily</p>
                                 </div>
                             </div>
