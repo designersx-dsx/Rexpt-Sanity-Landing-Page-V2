@@ -1,0 +1,15 @@
+.containerBox{
+        padding-inline: 20px;
+}
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.LeftBar{
+    width: 50%;
+}
