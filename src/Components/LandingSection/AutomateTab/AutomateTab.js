@@ -30,7 +30,7 @@ const AutomateTab = () => {
                 "Lead Scan helps you capture and qualify leads faster, improving your sales efficiency and closing rates.",
             linkText: "Learn How It Works",
             buttonText: "Start Scanning",
-            img: "/Images/bell-img.png"
+            img: "/Images/Qualify-Lead.png"
         },
         {
             title: "24/7 Live",
@@ -43,7 +43,7 @@ const AutomateTab = () => {
                 "Provide round-the-clock support without burning out your team. Our hybrid model ensures every inquiry is answered.",
             linkText: "Explore 24/7 Live Support",
             buttonText: "Go Live Now",
-            img: "/Images/bell-img.png"
+            img: "/Images/24Live.png"
         },
         {
             title: "Calendar Booking",
@@ -56,7 +56,7 @@ const AutomateTab = () => {
                 "Quick Book removes the friction from scheduling. Clients can instantly book a time that works for them and you.",
             linkText: "Discover Quick Book",
             buttonText: "Try Quick Book",
-            img: "/Images/bell-img.png"
+            img: "/Images/Calendar-Booking.png"
         },
         {
             title: "Smart Stats",
@@ -70,6 +70,7 @@ const AutomateTab = () => {
             linkText: "See Analytics in Action",
             buttonText: "View Stats",
             img: "/Images/bell-img.png"
+            
         }
     ];
     return (
