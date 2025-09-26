@@ -106,7 +106,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1023px) {
+@media (max-width: 1050px) {
     .navLinks {
         position: absolute;
         top: 70px;
@@ -125,5 +125,28 @@
 
     .hamburger {
         display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .navMain {
+        top: 0rem;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width:650px) {
+    .startBtn {
+        background: #6524eb;
+        color: #fff;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 25px;
+        cursor: pointer;
+        /* font-weight: 600; */
+        font-size: 16px;
+        transition: background 0.3s;
+        text-transform: uppercase;
+        white-space: nowrap;
     }
 }

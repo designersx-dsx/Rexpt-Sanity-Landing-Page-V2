@@ -9,19 +9,21 @@ import ClientsSay from '../../Components/LandingSection/ClientsSay/ClientsSay'
 import FaqSection from '../../Components/LandingSection/FaqSection/FaqSection'
 import CustomerExperience from '../../Components/LandingSection/CustomerExperience/CustomerExperience'
 import Footer from '../../Components/Footer/Footer'
+import MarqueeSlider from '../../Components/LandingSection/MarqueeSlider/MarqueeSlider'
 const LandingPage = () => {
     return (
         <>
             <Navbar />
             <HeroComponent />
+            <MarqueeSlider />
             <AutomateTab />
             <NextLevelFeatures />
-            <SliderSection/>
-            <YourAdvantage/>
-            <ClientsSay/>
-            <FaqSection/>
-            <CustomerExperience/>
-            <Footer/>
+            <SliderSection />
+            <YourAdvantage />
+            <ClientsSay />
+            <FaqSection />
+            <CustomerExperience />
+            <Footer />
 
         </>
     )

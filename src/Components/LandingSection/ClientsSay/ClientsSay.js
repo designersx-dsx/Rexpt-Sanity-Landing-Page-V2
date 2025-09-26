@@ -19,7 +19,7 @@ const ClientsSay = () => {
             text: `“Using rexpt has saved us hours of manual work. It feels like having a professional receptionist on duty 24/7.”`,
             author: "Sarah Lee, CEO of FutureTech",
             img: "/Images/clientslide2.png",
-            bgColor: "#567E32",
+            bgColor: "#6524EB",
             textColor: "#ffffffff"
         },
         {
@@ -27,24 +27,32 @@ const ClientsSay = () => {
             text: `“This platform is game-changing! We can finally focus on clients without worrying about missed calls.”`,
             author: "Mia Wilson, Partner at LegalBridge",
             img: "/Images/clientslide3.png",
-            bgColor: " #F3C740",
+            bgColor: "#EEE6FF",
             textColor: "#000000"
         },
         {
             id: 4,
             text: `“As a law firm, we need to ensure every call is handled with care and confidentiality. The rexpt AI receptionist has been perfect for our needs, accurately routing calls and capturing important information.”`,
             author: "Michael Chen, Founder of Innovate Solutions",
-         img: "/Images/clientslide2.png",
-            bgColor: "#6524EB",
+            img: "/Images/clientslide2.png",
+            bgColor: "#24252C",
             textColor: "#ffffffff"
         },
         {
             id: 5,
             text: `“As a law firm, we need to ensure every call is handled with care and confidentiality. The rexpt AI receptionist has been perfect for our needs, accurately routing calls and capturing important information.”`,
             author: "Michael Chen, Founder of Innovate Solutions",
-              img: "/Images/clientslide3.png",
+            img: "/Images/clientslide3.png",
+            bgColor: "#6524EB",
+            textColor: "#ffffffff"
+        },
+        {
+            id: 6,
+            text: `“This platform is game-changing! We can finally focus on clients without worrying about missed calls.”`,
+            author: "Mia Wilson, Partner at LegalBridge",
+            img: "/Images/clientslide3.png",
             bgColor: "#EEE6FF",
-            textColor: "#24252C"
+            textColor: "#000000"
         },
     ];
 
@@ -85,9 +93,9 @@ const ClientsSay = () => {
         >
             <div className={styles.TitleBarDiv}>
                 <TitleBar
-                    subTitle="Our Impact,"
-                    spanText="Your Advantage"
-                    title="Transforming Business Communications"
+                    subTitle="What Our"
+                    spanText="Clients Say"
+                    title="Hear from Those Who Chose Rexpt"
                 />
             </div>
 
@@ -121,7 +129,7 @@ const ClientsSay = () => {
 
                 <div className={styles.controls}>
                     <div>
-                        <AnimatedBtn text2="Join" logo="/Svg/rexpt-logo2.svg" />
+                        <AnimatedBtn text2="Join" logo="/Svg/rexpt-logo2.svg" shapeType="alt"/>
                     </div>
                     <div className={styles.BothBtn}>
                         {/* <button onClick={prevSlide}>

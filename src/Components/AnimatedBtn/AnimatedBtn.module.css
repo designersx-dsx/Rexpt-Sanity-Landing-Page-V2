@@ -29,6 +29,7 @@
 }
 
 /* Flex content (text2 + logo) inside shape */
+
 .flexContent {
     position: absolute;
     top: 50%;
@@ -41,15 +42,11 @@
 }
 
 .flexContent .logo {
-    /* width: 28px;
-    height: 28px; */
     object-fit: contain;
 }
 
 .flexContent span {
-    font-size: 40px;
-    /* font-weight: 500; */
-    /* color: #fff; */
+    font-size:35px;
     font-style: italic;
 }
 

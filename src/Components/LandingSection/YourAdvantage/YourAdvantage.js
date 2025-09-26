@@ -9,9 +9,9 @@ const YourAdvantage = () => {
             <div className={styles.containerBox}>
                 <div className={styles.TitleBarDiv}>
                     <TitleBar
-                        subTitle="What Our,"
-                        spanText="Clients Say"
-                        title="Hear from Those Who Chose Rexpt"
+                        subTitle="Our Impact,"
+                        spanText="Your Advantage"
+                        title="Transforming Business Communications"
                     />
                 </div>
                 <div className={styles.container}>
