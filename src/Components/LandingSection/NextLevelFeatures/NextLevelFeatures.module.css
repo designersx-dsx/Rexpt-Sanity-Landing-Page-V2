@@ -1,6 +1,6 @@
 /* NextLevelFeatures.module.css */
 .containerBox {
-   padding: 8rem 0px 0px 0px;
+    padding: 8rem 20px 0px 20px;
 }
 
 .GridSection {
@@ -9,7 +9,7 @@
     border-radius: 40px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     padding: 50px;
-    margin-top: 2rem;
+    margin-top: 5rem;
     display: grid;
     gap: 20px;
 }
@@ -109,23 +109,79 @@
 }
 
 .specialTitle {
-  font-size: clamp(40px, 5vw, 105px);
-  color: #24252C;
-  font-family: 'Arbotek black', sans-serif;
-  text-align: center;
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: 2px;
+    font-size: clamp(40px, 5vw, 105px);
+    color: #24252C;
+    font-family: 'Arbotek black', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .specialTitle span {
-  display: inline-block;
-  transition: transform 0.3s ease, font-weight 0.3s ease, color 0.3s ease;
-  cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease, font-weight 0.3s ease, color 0.3s ease;
+    cursor: pointer;
 }
 
 .specialTitle span:hover {
-  transform: scale(1.3);      
-  font-weight: 900;          
-  color: #6524EB;                
+    transform: scale(1.3);
+    font-weight: 900;
+    color: #6524EB;
+}
+
+@media(max-width:1200px) {
+    .card {
+        height: unset;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid>div:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .gridSecond {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .gridSecond>div:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .gridFive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid>div:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    .gridSecond {
+        grid-template-columns: 1fr;
+    }
+
+    .gridSecond>div:nth-child(3) {
+        grid-column: span 1;
+    }
+     .gridFive {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width:650px) {
+.GridSection{
+    padding: 1rem;
+    border-radius: 10px;
+}
 }
