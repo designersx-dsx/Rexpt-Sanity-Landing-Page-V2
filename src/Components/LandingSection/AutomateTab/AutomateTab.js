@@ -69,8 +69,9 @@ const AutomateTab = () => {
                 "Smart Stats gives you a clear picture of your performance so you can make better decisions, faster.",
             linkText: "See Analytics in Action",
             buttonText: "View Stats",
-            img: "/Images/bell-img.png"
-            
+            // img: "/Images/bell-img.png"
+            video: "/Video/smart-stats-demo.mp4"
+
         }
     ];
     return (
@@ -106,7 +107,7 @@ const AutomateTab = () => {
                     <div className={styles.features}>
                         {tabData[activeTab].features.map((f, i) => (
                             <div key={i} className={styles.featureItem}>
-                                <span className={styles.icon}><img src={f.icon}  alt='icon'/></span>
+                                <span className={styles.icon}><img src={f.icon} alt='icon' /></span>
                                 <span>{f.text}</span>
                             </div>
                         ))}
@@ -127,8 +128,22 @@ const AutomateTab = () => {
                 </div>
 
                 {/* Right Side */}
-                <div className={styles.right}>
-                    <img src={tabData[activeTab].img} alt={tabData[activeTab].title} />
+                 <div className={styles.right}>
+                    {tabData[activeTab].title === "Smart Stats" ? (
+                        <video
+                            src={tabData[activeTab].video}
+                            autoPlay
+                            muted
+                            loop
+                            controls
+                            className={styles.video}
+                        />
+                    ) : (
+                        <img
+                            src={tabData[activeTab].img}
+                            alt={tabData[activeTab].title}
+                        />
+                    )}
                 </div>
             </div>
         </div>

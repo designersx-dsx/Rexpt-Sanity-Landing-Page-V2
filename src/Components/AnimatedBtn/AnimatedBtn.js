@@ -5,9 +5,14 @@ const AnimatedBtn = ({
     text = "", 
     text2 = "", 
     logo = "", 
-    shape = "Svg/shape-btn.svg",  // default shape
-    textColor = "#fff"            // default white text
+    shapeType = "default",   // agar pass na kare to "default" hi chalega
+    textColor = "#fff" 
 }) => {
+    // default / alt ke base pe shape choose hoga
+    const shape = shapeType === "alt" 
+        ? "/Svg/shape-btn3.svg" 
+        : "/Svg/shape-btn.svg";
+
     return (
         <div className={styles.btn}>
             <img src={shape} alt="btn-shape" className={styles.shape} />
