@@ -77,11 +77,14 @@ const AutomateTab = () => {
     return (
         <div className={styles.tabsWrapper}>
             <div className={styles.TopSection}>
-                <TitleBar
-                    subTitle="See how"
-                    spanText="Rexpt Works"
-                    title="Seamlessly in real time."
-                />
+                <div className={styles.LeftBar}>
+                    <TitleBar
+                        subTitle="See how"
+                        spanText="Rexpt Works"
+                        title="Seamlessly in real time."
+                    />
+                </div>
+
                 <div className={styles.RightBar}>
                     <p className={styles.RightDesc}>Experience the full workflow—how Rexpt listens, understands, and delivers solutions seamlessly.</p>
                 </div>
@@ -128,7 +131,7 @@ const AutomateTab = () => {
                 </div>
 
                 {/* Right Side */}
-                 <div className={styles.right}>
+                <div className={styles.right}>
                     {tabData[activeTab].title === "Smart Stats" ? (
                         <video
                             src={tabData[activeTab].video}

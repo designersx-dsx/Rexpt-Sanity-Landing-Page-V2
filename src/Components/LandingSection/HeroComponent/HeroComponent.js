@@ -24,14 +24,14 @@ const HeroComponent = () => {
               {/* Left side (colored sections) */}
               <div className={styles.left}>
                 <div className={`${styles.section} ${styles.yellow}`}>
-                  <div className={styles.icon}>
+                  <div className={`${styles.icon} ${styles.AnimationCall}`} >
                     <img src='/Svg/Call-First.svg' alt='24/7 Call Handling' />
                   </div>
                   <h3 className={styles.Bold}>24/7 Call Handling</h3>
                 </div>
 
                 <div className={`${styles.section} ${styles.green}`}>
-                  <div className={styles.icon}>
+                  <div className={`${styles.icon} ${styles.AnimationLanguage}`}>
                     <img src='/Svg/language-icon.svg' alt='32+ language' />
                   </div>
                   <h3 className={styles.Bold}>32+ Languages</h3>
@@ -41,7 +41,7 @@ const HeroComponent = () => {
                 </div>
 
                 <div className={`${styles.section} ${styles.blue}`}>
-                  <div className={styles.icon}>
+                  <div className={`${styles.icon} ${styles.AnimationInteraction}`}>
                     <img src='/Svg/Effortless-Integration.svg' alt='Effortless Integration' />
                   </div>
                   <h3 className={styles.Bold}>Effortless Integration</h3>

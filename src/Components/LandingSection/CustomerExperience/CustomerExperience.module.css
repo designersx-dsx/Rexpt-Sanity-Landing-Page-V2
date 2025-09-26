@@ -26,6 +26,7 @@
     height: 100dvh;
     overflow: hidden;
     position: relative;
+    margin-top: 5rem;
 }
 
 .scroller {

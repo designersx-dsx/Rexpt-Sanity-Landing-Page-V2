@@ -79,6 +79,102 @@
 
 .RightImg img {
     width: 100%;
+    
+}
+.AnimationCall img  {    
+    animation: vibe 1s linear 1s infinite;
+}
+
+@keyframes vibe {
+    0% {}
+
+    2% {
+        transform: translateX(5px) rotateZ(1deg);
+    }
+
+    4% {
+        transform: translateX(-5px) rotateZ(-1deg);
+    }
+
+    6% {
+        transform: translateX(3px) rotateZ(2deg);
+    }
+
+    8% {
+        transform: translateX(-2px) rotateZ(-2deg);
+    }
+
+    10% {
+        transform: translateX(1px) rotateZ(2deg);
+    }
+
+    12% {
+        transform: translateX(-5px) rotateZ(-2deg);
+    }
+
+    14% {
+        transform: translateX(3px) rotateZ(-1deg);
+    }
+
+    16% {
+        transform: translateX(-5px) rotateZ(-2deg);
+    }
+
+    18% {
+        transform: translateX(5px) rotateZ(2deg);
+    }
+
+    20% {
+        transform: translateX(-5px) rotateZ(-2deg);
+    }
+
+    22% {
+        transform: translateX(5px) rotateZ(2deg);
+    }
+
+    24% {
+        transform: translateX(-3px) rotateZ(-2deg);
+    }
+
+    26% {
+        transform: translateX(0px) rotateZ(0deg);
+    }
+
+    100% {}
+}
+
+.AnimationInteraction img  {    
+    animation: spin 3s linear 1s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.AnimationLanguage img {
+     animation: floatIcon 3s ease-in-out infinite;
+}
+@keyframes floatIcon {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(2px, -2px);
+  }
+  50% {
+    transform: translate(0, -4px);
+  }
+  75% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 /* hand Phone Css */
