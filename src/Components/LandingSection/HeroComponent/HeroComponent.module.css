@@ -61,26 +61,250 @@
 }
 
 .RightSection {
-    width: 60%;
+    width: 55%;
     align-items: end;
     display: flex;
+    justify-content: center;
+    right: 0;
+    bottom: 0%;
+    position: absolute;
 }
 
 .RightImg {
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     text-align: end;
+    width: 100%;
 }
 
 .RightImg img {
     width: 100%;
+    
 }
+.AnimationCall img  {    
+    animation: vibe 1s linear 1s infinite;
+}
+
+@keyframes vibe {
+    0% {}
+
+    2% {
+        transform: translateX(5px) rotateZ(1deg);
+    }
+
+    4% {
+        transform: translateX(-5px) rotateZ(-1deg);
+    }
+
+    6% {
+        transform: translateX(3px) rotateZ(2deg);
+    }
+
+    8% {
+        transform: translateX(-2px) rotateZ(-2deg);
+    }
+
+    10% {
+        transform: translateX(1px) rotateZ(2deg);
+    }
+
+    12% {
+        transform: translateX(-5px) rotateZ(-2deg);
+    }
+
+    14% {
+        transform: translateX(3px) rotateZ(-1deg);
+    }
+
+    16% {
+        transform: translateX(-5px) rotateZ(-2deg);
+    }
+
+    18% {
+        transform: translateX(5px) rotateZ(2deg);
+    }
+
+    20% {
+        transform: translateX(-5px) rotateZ(-2deg);
+    }
+
+    22% {
+        transform: translateX(5px) rotateZ(2deg);
+    }
+
+    24% {
+        transform: translateX(-3px) rotateZ(-2deg);
+    }
+
+    26% {
+        transform: translateX(0px) rotateZ(0deg);
+    }
+
+    100% {}
+}
+
+.AnimationInteraction img  {    
+    animation: spin 3s linear 1s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.AnimationLanguage img {
+     animation: floatIcon 3s ease-in-out infinite;
+}
+@keyframes floatIcon {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(2px, -2px);
+  }
+  50% {
+    transform: translate(0, -4px);
+  }
+  75% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* hand Phone Css */
+
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 5px 0px;
+}
+
+/* Left column → blocks stack */
+.left {
+    display: block;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+/* Right column → phone image */
+.right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.phoneImage {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
+/* Section blocks */
+.section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+    border-radius: 50px 0px 0px 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #24252c;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    height: 55px;
+}
+
+.section:hover {
+    transform: translateY(-4px);
+}
+
+ .Bold {
+    font-family: 'Arbotek bold' !important;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.yellow {
+    background: #FFF494;
+    align-self: flex-end;
+    width: 84%;
+    float: right;
+}
+
+.green {
+    background: #D2EBBE;
+    align-self: flex-end;
+    width: 77%;
+    float: right;
+}
+
+.blue {
+    background: #BBE7EF;
+    align-self: flex-end;
+    z-index: 11;
+    position: relative;
+    width: 89%;
+    float: right;
+}
+
+/* Icon */
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.sectionImage {
+    display: flex;
+    position: absolute;
+    bottom: 32%;
+    justify-content: center;
+    align-items: center;
+    left: 15%;
+    right: 0;
+    pointer-events: none;
+
+}
+
+/* Responsive (desktop) */
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .left {
+        flex: 1;
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+}
+
+
+/* end */
 
 @media (max-width : 1600px) {
     .RightImg img {
         width: 75%;
     }
-     .Title {
+
+    .Title {
         line-height: 70px;
     }
 
