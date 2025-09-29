@@ -22,7 +22,7 @@ const LandingPage = () => {
             <YourAdvantage />
             <ClientsSay />
             <FaqSection />
-            <CustomerExperience />
+            <CustomerExperience /> 
             <Footer />
 
         </>

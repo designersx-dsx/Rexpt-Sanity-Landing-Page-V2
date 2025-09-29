@@ -128,8 +128,9 @@ const ClientsSay = () => {
                 </div>
 
                 <div className={styles.controls}>
-                    <div>
-                        <AnimatedBtn text2="Join" logo="/Svg/rexpt-logo2.svg" shapeType="alt"/>
+                    <div className={styles.btn}>
+                        {/* <AnimatedBtn text2="Join" logo="/Svg/rexpt-logo2.svg" shapeType="alt"/> */}
+                        <img src="/Svg/join-btn2.svg" alt="join-btn2"/>
                     </div>
                     <div className={styles.BothBtn}>
                         {/* <button onClick={prevSlide}>
