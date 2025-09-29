@@ -266,6 +266,10 @@
         padding: 4rem 15px 0 15px;
     }
 
+    .contentdiv {
+        align-items: center;
+    }
+
     .container {
         grid-template-columns: 1fr;
         /* 1 card per row */
@@ -335,7 +339,7 @@
     .BottomContaint {
         flex-direction: column;
         gap: 0.3rem;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .btn {

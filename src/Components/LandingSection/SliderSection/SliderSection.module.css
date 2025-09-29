@@ -265,15 +265,15 @@
 
   .arrowLeft,
   .arrowRight {
-    font-size: 1.2rem;
+    font-size: 10px;
     top: 2%;
   }
 
   .arrowRight {
-    right: 5px;
+    right: 20%;
   }
   .arrowLeft {
-    left: 5px;
+    left: 20%;
   }
 
   .contentMain {

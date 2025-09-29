@@ -79,7 +79,16 @@ const NextLevelFeatures = () => {
         <div className={styles.containerBox}>
             <div className={styles.container}>
                 <TitleBar subTitle="Next-Level" spanText="Features " title="With our AI Receptionist" />
-
+                <h1 className={styles.specialTitle2} >
+                    <span>F</span>
+                    <span>E</span>
+                    <span>A</span>
+                    <span>T</span>
+                    <span>U</span>
+                    <span>R</span>
+                    <span>E</span>
+                    <span>S</span>
+                </h1>
                 {/* First Section */}
                 <div className={styles.GridSection}>
                     <div className={styles.grid}>
