@@ -15,15 +15,15 @@ const LandingPage = () => {
         <>
             <Navbar />
             <HeroComponent />
-            <MarqueeSlider />
-            <AutomateTab />
-            <NextLevelFeatures />
-            <SliderSection />
-            <YourAdvantage />
-            <ClientsSay />
-            <FaqSection />
-            <CustomerExperience />
-            <Footer />
+            {/* <MarqueeSlider /> */}
+            {/* <AutomateTab /> */}
+            {/* <NextLevelFeatures /> */}
+            {/* <SliderSection /> */}
+            {/* <YourAdvantage /> */}
+            {/* <ClientsSay /> */}
+            {/* <FaqSection /> */}
+            {/* <CustomerExperience /> */}
+            {/* <Footer /> */}
 
         </>
     )
