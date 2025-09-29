@@ -34,7 +34,7 @@
     height: 70px;
     margin: 0 0.5em;
     padding: 1rem;
-    background: #ffffff;
+    background: #fbfbfb;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,7 @@
 }
 
 .MarqueeTag:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: #fbfbfb;
     transform: scale(1.1);
     cursor: pointer;
 }
