@@ -24,6 +24,7 @@ const LandingPage = () => {
             <FaqSection />
             <CustomerExperience /> 
             <Footer />
+            
 
         </>
     )
