@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../HeroComponent/HeroComponent.module.css'
 import AnimatedBtn from '../../AnimatedBtn/AnimatedBtn'
+import MobileAnimate from './MobileAnimate'
 const HeroComponent = () => {
   return (
     <div className={styles.containerBox}>
@@ -38,6 +39,7 @@ const HeroComponent = () => {
                 </div>
                 <div className={styles.sectionImage} >
                   <img className={styles.phoneImage} src='Images/holding-phone01.png' alt='holding-phone' />
+                  {/* <MobileAnimate/> */}
                 </div>
 
                 <div className={`${styles.section} ${styles.blue}`}>

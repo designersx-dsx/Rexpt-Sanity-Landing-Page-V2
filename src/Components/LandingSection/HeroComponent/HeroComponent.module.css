@@ -79,9 +79,10 @@
 
 .RightImg img {
     width: 100%;
-    
+
 }
-.AnimationCall img  {    
+
+.AnimationCall img {
     animation: vibe 1s linear 1s infinite;
 }
 
@@ -143,38 +144,44 @@
     100% {}
 }
 
-.AnimationInteraction img  {    
+.AnimationInteraction img {
     animation: spin 3s linear 1s infinite;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .AnimationLanguage img {
-     animation: floatIcon 3s ease-in-out infinite;
+    animation: floatIcon 3s ease-in-out infinite;
 }
+
 @keyframes floatIcon {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(2px, -2px);
-  }
-  50% {
-    transform: translate(0, -4px);
-  }
-  75% {
-    transform: translate(-2px, -2px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(2px, -2px);
+    }
+
+    50% {
+        transform: translate(0, -4px);
+    }
+
+    75% {
+        transform: translate(-2px, -2px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 /* hand Phone Css */
@@ -229,7 +236,7 @@
     transform: translateY(-4px);
 }
 
- .Bold {
+.Bold {
     font-family: 'Arbotek bold' !important;
     font-weight: bold;
     font-size: 25px;
@@ -277,6 +284,52 @@
 }
 
 /* Responsive (desktop) */
+
+
+
+/* end */
+
+@media (max-width : 1600px) {
+    .sectionImage {
+        justify-content: end;
+    }
+
+    .LeftSection {
+        padding-left: 20px;
+    }
+
+    .RightImg img {
+        width: 75%;
+    }
+
+    .Title {
+        line-height: 70px;
+    }
+
+}
+
+@media (max-width : 1400px) {
+    .RightImg img {
+        width: 60%;
+    }
+
+
+}
+
+@media (max-width : 1360px) {
+    .yellow {
+        width: 100%;
+    }
+
+    .green {
+        width: 100%;
+    }
+
+    .blue {
+        width: 100%;
+    }
+}
+
 @media (min-width: 1024px) {
     .container {
         flex-direction: row;
@@ -296,30 +349,64 @@
     }
 }
 
-
-/* end */
-
-@media (max-width : 1600px) {
-    .RightImg img {
-        width: 75%;
+@media (max-width:920px) {
+    .ContentDiv {
+        width: 100%;
+        top: 10%;
     }
 
-    .Title {
-        line-height: 70px;
+    .LeftSection {
+        padding-right: 20px;
     }
 
-}
-
-@media (max-width : 1400px) {
-    .RightImg img {
-        width: 60%;
+    .RightSection {
+        width: 90%;
     }
 
 }
-
 
 @media (max-width : 600px) {
     .Title {
         line-height: normal;
     }
+}
+
+@media (max-width : 500px) {
+    .sectionImage {
+        left: 20%;
+    }
+
+    .Description {
+        width: 100%;
+    }
+
+    .section {
+        padding-block: 8px;
+        gap: 0;
+    }
+
+    .Title {
+        width: 90%;
+    }
+
+    .Bold {
+        font-size: clamp(16px, 3.9vw, 24px);
+    }
+
+    .BtnDiv {
+        width: 90%;
+    }
+
+    .yellow {
+        width: 97%;
+    }
+
+    .green {
+        width: 97%;
+    }
+
+    .blue {
+        width: 97%;
+    }
+
 }
