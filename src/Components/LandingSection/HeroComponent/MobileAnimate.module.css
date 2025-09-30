@@ -32,10 +32,25 @@
 
 /* Scroll top → bottom + pause */
 @keyframes slideWithPause {
-  0%   { background-position: top; }
-  70%  { background-position: center; }   /* slow scroll till middle */
-  80%  { background-position: center; }   /* pause 1s */
-  100% { background-position: bottom; }   /* continue to bottom */
+  0% {
+    background-position: top;
+  }
+
+  70% {
+    background-position: center;
+  }
+
+  /* slow scroll till middle */
+  80% {
+    background-position: center;
+  }
+
+  /* pause 1s */
+  100% {
+    background-position: bottom;
+  }
+
+  /* continue to bottom */
 }
 
 /* Fade effect */
@@ -43,6 +58,7 @@
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
+
 .fadeOut {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -59,8 +75,13 @@
   justify-content: center;
 }
 
-.headerImage { top: 0; }
-.footerImage { bottom: 0; }
+.headerImage {
+  top: 0;
+}
+
+.footerImage {
+  bottom: 0;
+}
 
 .headerImage img,
 .footerImage img {
@@ -68,12 +89,24 @@
   height: auto;
   pointer-events: none;
 }
+
 /* Scroll down (default) */
 @keyframes slideDownWithPause {
-  0%   { background-position: top; }
-  70%  { background-position: center; }
-  80%  { background-position: center; }
-  100% { background-position: bottom; }
+  0% {
+    background-position: top;
+  }
+
+  70% {
+    background-position: center;
+  }
+
+  80% {
+    background-position: center;
+  }
+
+  100% {
+    background-position: bottom;
+  }
 }
 
 /* Scroll up */
@@ -82,10 +115,21 @@
 }
 
 @keyframes slideUpWithPause {
-  0%   { background-position: bottom; }
-  70%  { background-position: center; }
-  80%  { background-position: center; }
-  100% { background-position: top; }
+  0% {
+    background-position: bottom;
+  }
+
+  70% {
+    background-position: center;
+  }
+
+  80% {
+    background-position: center;
+  }
+
+  100% {
+    background-position: top;
+  }
 }
 
 /* Base blink style */

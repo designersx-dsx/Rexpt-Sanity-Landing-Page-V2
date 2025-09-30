@@ -38,8 +38,8 @@ const HeroComponent = () => {
                   <h3 className={styles.Bold}>32+ Languages</h3>
                 </div>
                 <div className={styles.sectionImage} >
-                  {/* <img className={styles.phoneImage} src='Images/holding-phone01.png' alt='holding-phone' /> */}
-                  <MobileAnimate/>
+                  <img className={styles.phoneImage} src='Images/holding-phone01.png' alt='holding-phone' />
+                  {/* <MobileAnimate/> */}
                 </div>
 
                 <div className={`${styles.section} ${styles.blue}`}>
