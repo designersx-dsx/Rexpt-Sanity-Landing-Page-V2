@@ -47,8 +47,16 @@
     margin: 0;
     font-family: 'Arbotek black';
     line-height: 90px;
+     transition: all 0.3s ease;
+  cursor: pointer; /* optional, for hover feel */
 }
 
+
+/* Hover effect */
+.Title:hover {
+  color: transparent; /* Make text fill transparent */
+  -webkit-text-stroke: 1px #24252c; /* Add stroke/outline */
+}
 
 .Description {
     font-size: 18px;
