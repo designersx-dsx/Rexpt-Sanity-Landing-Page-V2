@@ -1,5 +1,5 @@
 .containerBox {
-       padding: 8rem 0px 0px 0px;
+    padding: 8rem 0px 0px 0px;
 }
 
 .container {
@@ -12,7 +12,7 @@
     gap: 1rem;
     border-bottom: 2px solid #E3E3E3;
     padding-bottom: 35px;
-    
+    padding-inline: 20px;
 }
 
 .LeftBar {
@@ -39,6 +39,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .right a {
@@ -52,8 +53,6 @@
     background: #fff;
     transition: all 0.3s ease;
 }
-
-
 
 .right img {
     object-fit: contain;
@@ -126,4 +125,80 @@
     text-align: center;
     padding-inline: 20px;
     margin-top: 2rem;
+}
+
+.BottomLogo img {
+    width: 100%;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .LeftBar,
+    .RightBar {
+        width: 100%;
+    }
+
+    .desc p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .footer {
+        justify-content: flex-start;
+        gap: 40px;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .column h4 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .column li {
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .containerBox {
+        padding: 4rem 20px 0 20px;
+    }
+
+    .container {
+        padding-bottom: 25px;
+        gap: 2rem;
+    }
+
+    .desc p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .column h4 {
+        font-size: 18px;
+    }
+
+    .column li {
+        font-size: 15px;
+    }
+
+    .BottomLogo img {
+        width: 100%;
+
+    }
 }
