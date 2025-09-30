@@ -6,49 +6,70 @@ const slides = [
     bg: "/Svg/Dashboard01.svg",
     header: "/Svg/Header.svg",
     footer: "/Svg/Footer-Nav.svg",
-    showFooter: true
+    showFooter: true,
+    blinkClass: styles.blinkCenter01, // custom blink class
   },
   {
     bg: "/Svg/Dashboard02.svg",
     header: "/Svg/Header02.svg",
     footer: "/Svg/Footer-Nav.svg",
-    showFooter: false
+    showFooter: true,
+    blinkClass: styles.blinkBottom02, // custom blink class
+  },
+  {
+    bg: "/Svg/Dashboard03.svg",
+    header: "/Svg/Header03.svg",
+    footer: "/Svg/Footer-Nav.svg",
+    showFooter: false,
+    blinkClass: styles.blinkCenter01, // custom blink class
+  },
+  {
+    bg: "/Svg/Dashboard04.svg",
+    header: "/Svg/Header04.svg",
+    footer: "/Svg/Footer-Nav.svg",
+    showFooter: false,
+    blinkClass: styles.blinkCenterNone, // custom blink class
   },
 ];
 
 const MobileAnimate = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fade, setFade] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState('down'); // 'down' or 'up'
-  const [step, setStep] = useState('scrollDown'); // scrollDown -> scrollUp -> pause
+  const [scrollDirection, setScrollDirection] = useState("down");
+  const [step, setStep] = useState("scrollDown");
   const [showBlink, setShowBlink] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (step === 'scrollDown') {
-        setScrollDirection('down');
-        setStep('scrollUp');
-      } else if (step === 'scrollUp') {
-        setScrollDirection('up');
-        setStep('pause');
-        // Blink will appear 1s before next slide
-        setTimeout(() => setShowBlink(true), 10000); // show blink 1s before next slide
-      } else if (step === 'pause') {
+    let timer;
+
+    if (step === "scrollDown") {
+      setScrollDirection("down");
+      timer = setTimeout(() => setStep("scrollUp"), 3000);
+    }
+
+    if (step === "scrollUp") {
+      setScrollDirection("up");
+      timer = setTimeout(() => setStep("pause"), 2000);
+    }
+
+    if (step === "pause") {
+      setTimeout(() => setShowBlink(true), 500);
+
+      timer = setTimeout(() => {
+        setShowBlink(false);
+        setFade(true);
         setTimeout(() => {
-          setShowBlink(false);
-          setFade(true); // fade out next slide
-          setTimeout(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
-            setFade(false);
-            setStep('scrollDown');
-          }, 1000); // fade duration
-        }, 6000); // total scroll duration
-      }
-    }, 6000);
-    return () => clearInterval(interval);
+          setCurrentSlide((prev) => (prev + 1) % slides.length);
+          setFade(false);
+          setStep("scrollDown");
+        }, 800);
+      }, 1500);
+    }
+
+    return () => clearTimeout(timer);
   }, [step]);
 
-  const { bg, header, footer, showFooter } = slides[currentSlide];
+  const { bg, header, footer, showFooter, blinkClass } = slides[currentSlide];
 
   return (
     <div className={styles.sectionImage}>
@@ -62,7 +83,7 @@ const MobileAnimate = () => {
         <div
           key={currentSlide + scrollDirection}
           className={`${styles.scrollingBg} ${fade ? styles.fadeOut : styles.fadeIn} ${
-            scrollDirection === 'up' ? styles.scrollUp : ''
+            scrollDirection === "up" ? styles.scrollUp : ""
           }`}
           style={{ backgroundImage: `url(${bg})` }}
         />
@@ -75,7 +96,7 @@ const MobileAnimate = () => {
         )}
 
         {/* Red blinking fake click */}
-        {showBlink && <div className={styles.redBlinkClick}></div>}
+        {showBlink && <div className={`${styles.redBlinkClick} ${blinkClass}`} />}
       </div>
     </div>
   );

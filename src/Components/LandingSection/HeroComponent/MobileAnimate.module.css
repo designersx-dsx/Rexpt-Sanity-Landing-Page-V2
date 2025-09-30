@@ -13,7 +13,8 @@
   position: relative;
   background: #ffffff;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
- /* background: url('/public/Images/holding-phone01.png') no-repeat center center/cover; */
+  left: 40px;
+ 
 }
 
 .scrollingBg {
@@ -31,10 +32,25 @@
 
 /* Scroll top → bottom + pause */
 @keyframes slideWithPause {
-  0%   { background-position: top; }
-  70%  { background-position: center; }   /* slow scroll till middle */
-  80%  { background-position: center; }   /* pause 1s */
-  100% { background-position: bottom; }   /* continue to bottom */
+  0% {
+    background-position: top;
+  }
+
+  70% {
+    background-position: center;
+  }
+
+  /* slow scroll till middle */
+  80% {
+    background-position: center;
+  }
+
+  /* pause 1s */
+  100% {
+    background-position: bottom;
+  }
+
+  /* continue to bottom */
 }
 
 /* Fade effect */
@@ -42,6 +58,7 @@
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
+
 .fadeOut {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -58,8 +75,13 @@
   justify-content: center;
 }
 
-.headerImage { top: 0; }
-.footerImage { bottom: 0; }
+.headerImage {
+  top: 0;
+}
+
+.footerImage {
+  bottom: 0;
+}
 
 .headerImage img,
 .footerImage img {
@@ -67,12 +89,24 @@
   height: auto;
   pointer-events: none;
 }
+
 /* Scroll down (default) */
 @keyframes slideDownWithPause {
-  0%   { background-position: top; }
-  70%  { background-position: center; }
-  80%  { background-position: center; }
-  100% { background-position: bottom; }
+  0% {
+    background-position: top;
+  }
+
+  70% {
+    background-position: center;
+  }
+
+  80% {
+    background-position: center;
+  }
+
+  100% {
+    background-position: bottom;
+  }
 }
 
 /* Scroll up */
@@ -81,29 +115,73 @@
 }
 
 @keyframes slideUpWithPause {
-  0%   { background-position: bottom; }
-  70%  { background-position: center; }
-  80%  { background-position: center; }
-  100% { background-position: top; }
+  0% {
+    background-position: bottom;
+  }
+
+  70% {
+    background-position: center;
+  }
+
+  80% {
+    background-position: center;
+  }
+
+  100% {
+    background-position: top;
+  }
 }
-/* Red blinking fake click */
+
+/* Base blink style */
 .redBlinkClick {
   position: absolute;
-  top: 40%;
-  left: 50%;
   width: 20px;
   height: 20px;
-  margin-left: -10px; /* center horizontally */
-  margin-top: -10px;  /* center vertically */
   background-color: #6524EB;
   border-radius: 50%;
   z-index: 3;
-  animation: blink 1s infinite;
+  animation: blink 0.5s linear 2; /* 2 बार blink */
 }
 
+/* Different blink positions */
+.blinkCenter01 {
+  top: 40%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.blinkBottom02 {
+  top: 80%;
+  left: 15%;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.blinkCenterNone{
+  top: 80%;
+  left: 15%;
+  margin-left: -10px;
+  margin-top: -10px;
+  display: none;
+
+}
+
+/* Blink animation */
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
+@media  (max-width :1600px){
 
+  .mobileframe {
+  width: 220px;
+  height: 440px;
+  border: 8px solid #000;
+  left: -25%;
+ 
+ 
+}
+
+  
+}
