@@ -69,9 +69,14 @@ const AutomateTab = () => {
                 "Smart Stats gives you a clear picture of your performance so you can make better decisions, faster.",
             linkText: "See Analytics in Action",
             buttonText: "View Stats",
-            // img: "/Images/bell-img.png"
-            video: "/Video/smart-stats-demo.mp4"
-
+            video: "/Video/smart-stats-demo.mp4",
+            videoProps: {
+                autoPlay: true,
+                loop: true,
+                muted: true,
+                playsInline: true,
+                controls: false   // ✅ yaha se controls hide
+            }
         }
     ];
     return (
