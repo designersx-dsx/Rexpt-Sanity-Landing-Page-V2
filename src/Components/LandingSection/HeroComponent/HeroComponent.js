@@ -14,7 +14,7 @@ const HeroComponent = () => {
             <h1 className={styles.Title}>Never Miss a Call Never Miss a Client</h1>
             <p className={styles.Description}>Ensure quality leads and bookings as agents handle calls, deliver high-quality appointments, and seamlessly integrate with your current system for streamlined operations.</p>
             <div className={styles.BtnDiv}>
-              <AnimatedBtn text="Get Started for FREE" />
+              <AnimatedBtn text="Get Started for FREE"  />
             </div>
           </div>
         </div>

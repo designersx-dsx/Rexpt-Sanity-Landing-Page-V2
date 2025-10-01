@@ -14,12 +14,11 @@ const Navbar = () => {
         {/* Menu Links */}
         <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
           <li><a href="#features">Features</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#industries">Industries</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact </a></li>
+      
         </ul>
 
         {/* Right Section */}
