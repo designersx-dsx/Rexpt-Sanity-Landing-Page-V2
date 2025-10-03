@@ -140,6 +140,8 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 3rem;
+        width: unset;
+
     }
 
     .LeftBar,
@@ -153,7 +155,6 @@
     }
 
     .footer {
-        justify-content: flex-start;
         gap: 40px;
         padding: 0;
         flex-wrap: wrap;
@@ -178,6 +179,7 @@
     .container {
         padding-bottom: 25px;
         gap: 2rem;
+        padding-inline: 0px;
     }
 
     .desc p {
@@ -194,8 +196,13 @@
         font-size: 18px;
     }
 
-    .column li {
-        font-size: 15px;
+    .column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
 
     .BottomLogo img {

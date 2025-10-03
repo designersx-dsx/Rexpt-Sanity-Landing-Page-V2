@@ -14,7 +14,7 @@ const HeroComponent = () => {
             <h1 className={styles.Title}>Never Miss a Call Never Miss a Client</h1>
             <p className={styles.Description}>Ensure quality leads and bookings as agents handle calls, deliver high-quality appointments, and seamlessly integrate with your current system for streamlined operations.</p>
             <div className={styles.BtnDiv}>
-              <AnimatedBtn text="Get Started for FREE"  />
+              <AnimatedBtn text="Get Started for FREE" />
             </div>
           </div>
         </div>
@@ -38,8 +38,8 @@ const HeroComponent = () => {
                   <h3 className={styles.Bold}>32+ Languages</h3>
                 </div>
                 <div className={styles.sectionImage} >
-                  <img className={styles.phoneImage} src='Images/holding-phone01.png' alt='holding-phone' />
-                  {/* <MobileAnimate/> */}
+                  {/* <img className={styles.phoneImage} src='Images/holding-phone01.png' alt='holding-phone' /> */}
+                  <MobileAnimate />
                 </div>
 
                 <div className={`${styles.section} ${styles.blue}`}>
@@ -50,8 +50,8 @@ const HeroComponent = () => {
                 </div>
               </div>
 
-             
-              
+
+
             </div>
           </div>
         </div>

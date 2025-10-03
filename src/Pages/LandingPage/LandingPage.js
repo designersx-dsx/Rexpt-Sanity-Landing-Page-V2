@@ -22,8 +22,8 @@ const LandingPage = () => {
             <YourAdvantage />
             <ClientsSay />
             <FaqSection />
-            <CustomerExperience /> 
-            <Footer /> 
+            <CustomerExperience />
+             <Footer />  
         </>
     )
 }

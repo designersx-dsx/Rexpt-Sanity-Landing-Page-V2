@@ -190,11 +190,13 @@ video {
     width: 100%;
     border-radius: 10px;
 }
+
 video::-webkit-media-controls {
-  display: none !important;
+    display: none !important;
 }
+
 video::-webkit-media-controls-enclosure {
-  display: none !important;
+    display: none !important;
 }
 
 
@@ -202,7 +204,7 @@ video::-webkit-media-controls-enclosure {
 
 @media (max-width: 768px) {
     .tabsWrapper {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 
     .tabContent {
@@ -237,6 +239,10 @@ video::-webkit-media-controls-enclosure {
         scrollbar-color: black transparent;
         scrollbar-width: thin;
     }
+
+    .right {
+        display: none;
+    }
 }
 
 @media (max-width: 650px) {
@@ -256,5 +262,10 @@ video::-webkit-media-controls-enclosure {
 
     .RightDesc {
         text-align: left;
+    }
+
+    .link {
+        color: #6524EB;
+        font-size: 18px;
     }
 }
