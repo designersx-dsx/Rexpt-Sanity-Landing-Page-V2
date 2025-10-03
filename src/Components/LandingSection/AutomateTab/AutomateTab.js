@@ -87,6 +87,7 @@ const AutomateTab = () => {
                         subTitle="See how"
                         spanText="Rexpt Works"
                         title="Seamlessly in real time."
+                        
                     />
                 </div>
 
@@ -129,7 +130,7 @@ const AutomateTab = () => {
                             {tabData[activeTab].linkText} →
                         </a>
                         <div className={styles.demoBtn}>
-                            <AnimatedBtn text="View the Demo" />
+                            <AnimatedBtn text="View the Demo" fontFamily="Arboria Medium" />
                         </div>
                     </div>
 

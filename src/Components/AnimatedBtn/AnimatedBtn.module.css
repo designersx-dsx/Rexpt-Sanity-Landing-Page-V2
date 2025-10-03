@@ -22,7 +22,7 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-size: 28px;
-    font-weight: 500;
+    font-family: 'Arboria Light';
     margin: 0;
     white-space: nowrap;
     pointer-events: none;
@@ -46,7 +46,7 @@
 }
 
 .flexContent span {
-    font-size:35px;
+    font-size: 35px;
     font-style: italic;
 }
 
@@ -77,7 +77,14 @@
     0% {
         left: -75%;
     }
+
     100% {
         left: 125%;
+    }
+}
+
+@media(max-width:500px){
+    .btn p {
+        font-size: 24px;
     }
 }

@@ -20,46 +20,78 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     padding-inline: 20px;
     align-items: center;
 }
 
 .logo img {
     width: 80%;
-
 }
 
 .navLinks {
     display: flex;
     gap: 2rem;
     list-style: none;
-    transition: all 0.3s ease-in-out;
+    transition: left 0.3s ease;
 }
 
-.navLinks li a {
+.navLinks a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000;
     text-decoration: none;
-    color: #222;
-    font-weight: 500;
-    transition: color 0.2s;
+    transition: color 0.3s ease;
     font-size: 18px;
 }
 
-.navLinks li a:hover {
-    color: #6a11cb;
+/* Hover corner animation */
+.navLinks a::before,
+.navLinks a::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 2px solid #6524Eb;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navLinks a::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.navLinks a::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+.navLinks a:hover {
+    color: #6524Eb;
+}
+
+.navLinks a:hover::before {
+    top: 5px;
+    left: 5px;
+    opacity: 1;
+}
+
+.navLinks a:hover::after {
+    bottom: 5px;
+    right: 5px;
+    opacity: 1;
 }
 
 .right {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.toggle {
-    border: none;
-    background: transparent;
-    font-size: 18px;
-    cursor: pointer;
 }
 
 .startBtn {
@@ -118,10 +150,12 @@
         text-align: center;
         padding: 2rem 0;
         border-radius: 0 0 20px 20px;
+        z-index: 999;
     }
 
     .navLinks.open {
         left: 0;
+        margin: 0;
     }
 
     .hamburger {
@@ -136,18 +170,10 @@
     }
 }
 
-@media (max-width:650px) {
+@media (max-width: 650px) {
     .startBtn {
-        background: #6524eb;
-        color: #fff;
-        border: none;
         padding: 6px 10px;
-        border-radius: 25px;
-        cursor: pointer;
-        /* font-weight: 600; */
-        font-size: 16px;
-        transition: background 0.3s;
-        text-transform: uppercase;
+        font-size: 14px;
         white-space: nowrap;
     }
 }

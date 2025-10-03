@@ -214,12 +214,17 @@
 }
 
 @media(max-width:650px) {
+    .containerBox {
+        padding: 4rem 20px 0px 20px;
+    }
+
     .GridSection {
         padding: 1rem;
         border-radius: 10px;
         margin-top: 1rem;
     }
-    .specialTitle2{
+
+    .specialTitle2 {
         margin-top: 2rem;
     }
 }

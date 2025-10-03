@@ -235,3 +235,9 @@
     }
 
 }
+
+@media(max-width:650px) {
+    .containerBox {
+        padding: 4rem 20px 0px 20px;
+    }
+}

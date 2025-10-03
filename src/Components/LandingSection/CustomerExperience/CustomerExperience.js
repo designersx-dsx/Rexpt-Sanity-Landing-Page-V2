@@ -62,7 +62,7 @@ const CustomerExperience = () => {
 
                             </form>
                             <div className={styles.btn}>
-                                <AnimatedBtn text='Get Started +' />
+                                <AnimatedBtn text='Get Started +' fontFamily="Arboria Medium" />
                             </div>
                         </div>
                     </div>
