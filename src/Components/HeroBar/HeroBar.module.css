@@ -1,0 +1,29 @@
+.heroBar {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 0;
+  color: #24252C;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #24252C;
+  margin-top: 0.5rem;
+}
+
+/* alignment classes */
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}

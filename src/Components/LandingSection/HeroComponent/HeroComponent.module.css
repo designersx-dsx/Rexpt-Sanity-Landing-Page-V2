@@ -156,7 +156,7 @@
 }
 
 .AnimationInteraction img {
-    animation: spin 4s linear 1s infinite;
+    animation: spin 5s linear 1s infinite;
 }
 
 @keyframes spin {
