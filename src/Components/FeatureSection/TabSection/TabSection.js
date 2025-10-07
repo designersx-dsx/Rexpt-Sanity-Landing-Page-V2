@@ -16,12 +16,15 @@ const TabSection = () => {
 
 
             buttonText: "View the Demo",
-            img: "/Images/rexpt-app.png"
+            img: "/Images/rexpt-app.png",
+            ellips1: "/Svg/Ellipse-green-dark.svg",
+            ellips2: "/Svg/Ellipse-yellow.svg",
+
         },
         {
             title: "Smart Call Routing",
             heading: "BOOST YOUR LEAD CAPTURE",
-             features: [
+            features: [
                 { icon: "/Svg/login-icon.svg", text: "Seamless Login & Signup", subtext: 'Quick mobile number verification and basic details let users onboard in seconds.' },
                 { icon: "/Svg/setup-icon.svg", text: "AI Receptionist Setup", subtext: 'Easily configure your business’s virtual receptionist with voice, greeting, and response settings.' },
                 { icon: "/Svg/dashboard--icon.svg", text: "Real-time Dashboard", subtext: 'Track calls, customer interactions, and responses in one place with live analytics.' }
@@ -35,7 +38,7 @@ const TabSection = () => {
         {
             title: "Admin Panel",
             heading: "BE THERE FOR YOUR CUSTOMERS, ANYTIME",
-             features: [
+            features: [
                 { icon: "/Svg/login-icon.svg", text: "Seamless Login & Signup", subtext: 'Quick mobile number verification and basic details let users onboard in seconds.' },
                 { icon: "/Svg/setup-icon.svg", text: "AI Receptionist Setup", subtext: 'Easily configure your business’s virtual receptionist with voice, greeting, and response settings.' },
                 { icon: "/Svg/dashboard--icon.svg", text: "Real-time Dashboard", subtext: 'Track calls, customer interactions, and responses in one place with live analytics.' }
@@ -92,10 +95,18 @@ const TabSection = () => {
 
                 {/* Right Side */}
                 <div className={styles.right}>
-                    <img
-                        src={tabData[activeTab].img}
-                        alt={tabData[activeTab].title}
-                    />
+                    <div className={styles.imgDiv}>
+                        <img
+                            src={tabData[activeTab].img}
+                            alt={tabData[activeTab].title}
+                        />
+                    </div>
+
+                    <div className={styles.EllopsDiv}>
+                        <img className={styles.EllipseImg1} src={tabData[activeTab].ellips1} alt='ellips3' />
+                        <img className={styles.EllipseImg2} src={tabData[activeTab].ellips2} alt='ellips2' />
+
+                    </div>
                 </div>
             </div>
         </div>

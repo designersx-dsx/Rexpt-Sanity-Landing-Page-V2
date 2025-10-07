@@ -191,14 +191,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 
-.right img,
-video {
+.right video {
     width: 100%;
     border-radius: 10px;
 }
+
+.imgDiv img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.EllopsDiv {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.EllipseImg1 {
+    top: -30%;
+    left: 0;
+    position: absolute;
+}
+
+
+
 
 video::-webkit-media-controls {
     display: none !important;
