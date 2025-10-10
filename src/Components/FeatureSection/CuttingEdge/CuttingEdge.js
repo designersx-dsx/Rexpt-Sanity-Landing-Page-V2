@@ -7,13 +7,14 @@ const CuttingEdge = () => {
     const [scrollIndex, setScrollIndex] = useState(0);
 
     const cards = [
-        { icon: "/Svg/characterization-icon.svg", title: "Agent Characterization", bg: "#E8D9FF" },
-        { icon: "/Svg/characterization-icon.svg", title: "Email Notifications", bg: "#FFE3E3" },
-        { icon: "/Svg/characterization-icon.svg", title: "Speech Naturalization", bg: "#E2EEFF" },
-        { icon: "/Svg/characterization-icon.svg", title: "Environment Setup", bg: "#FFEED9" },
-        { icon: "/Svg/characterization-icon.svg", title: "Book Calendar Meetings", bg: "#E7FFE7" },
+        { icon: "/Svg/characterization-icon.svg", title: "Agent Characterization", bg: "#F1E7FC" },
+        { icon: "/Svg/characterization-icon.svg", title: "Email Notifications", bg: "#FDE8EB" },
+        { icon: "/Svg/characterization-icon.svg", title: "Speech Naturalization", bg: "#E2F0FF" },
+        { icon: "/Svg/characterization-icon.svg", title: "Environment Setup", bg: "#FFEFE2" },
+        { icon: "/Svg/calendar-icon.svg", title: "Book Calendar Meetings", bg: "#E5F6E1" },
         { icon: "/Svg/characterization-icon.svg", title: "Voice Personalization", bg: "#FBEAFF" },
-        { icon: "/Svg/characterization-icon.svg", title: "AI Chat Integration", bg: "#E9F9FF" },
+        { icon: "/Svg/characterization-icon.svg", title: "AI Chat Integration", bg: "#E5F6E1" },
+         { icon: "/Svg/characterization-icon.svg", title: "Agent Characterization", bg: "#F1E7FC" }
     ];
 
     const cardsPerView = 5;
