@@ -10,13 +10,16 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         {/* Logo */}
         <div className={styles.logo}>
-          <img src="/Svg/rexpt-logo.svg" alt="rexpt-logo" />
+          <Link to="/">
+
+            <img src="/Svg/rexpt-logo.svg" alt="rexpt-logo" />
+          </Link>
         </div>
 
         {/* Menu Links */}
         <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
           <li>
-            <Link to="/">Features</Link>
+            <Link to="/features">Features</Link>
           </li>
           <li>
             <a href="/">Pricing</a>

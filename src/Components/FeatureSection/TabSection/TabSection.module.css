@@ -1,0 +1,289 @@
+.tabsWrapper {
+    padding: 8rem 20px 0px 20px;
+}
+
+.TopSection {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400PX;
+    margin-inline: auto;
+    margin-block: 1rem 1.5rem;
+}
+
+.LeftBar {
+    width: 50%;
+}
+
+.subTitle {
+    font-size: var(--subtitle-size);
+
+}
+
+.spanText {
+    color: #6524EB;
+}
+
+.Title {
+    font-size: var(--title-size);
+    line-height: var(--title-line-height);
+}
+
+.RightBar {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.RightDesc {
+    font-size: clamp(16px, 2vw, 30px);
+    width: 90%;
+    text-align: end;
+    margin: 0;
+}
+
+
+
+.tabNav {
+    display: flex;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    border-bottom: 1px solid #eee;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.tabButton {
+    background: none;
+    border: none;
+    padding: 10px 0;
+    font-size: clamp(20px, 2vw, 27px);
+    cursor: pointer;
+    color: #818181;
+    position: relative;
+    font-family: 'Arboria Medium';
+}
+
+/* Underline hamesha rahe, bas scale pe control */
+.tabButton::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: #6524EB;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.tabButton.active {
+    color: #6524EB;
+
+}
+
+.tabButton.active::after {
+    transform: scaleX(1);
+}
+
+.tabContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    gap: 40px;
+    margin-top: 5rem;
+}
+
+.left {
+    flex: 1;
+}
+
+.left h2 {
+    font-size: clamp(25px, 3vw, 40px);
+    font-weight: 800;
+    color: #24252C;
+    margin-bottom: 2rem;
+    width: 95%;
+    font-family: 'Arbotek black';
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    background-image: repeating-linear-gradient(to right, #C2C2C2, #C2C2C2 6px, transparent 0px, transparent 15px);
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+
+
+.icon {
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.text {
+    font-size: 20px;
+    color: #000000;
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subtext {
+    font-size: 16px;
+    color: #818181;
+}
+
+.quote {
+    font-size: var(--subtitle-size);
+    color: #24252C;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Arbotek bold';
+    margin-top: 0;
+
+}
+
+.discoverDiv {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.link {
+    color: #6524EB;
+    font-size: 22px;
+    text-decoration: none;
+    display: inline-block;
+    margin-block: 2rem;
+}
+
+
+
+.right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.right video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.imgDiv img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.EllopsDiv {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.EllipseImg1 {
+    top: -30%;
+    left: 0;
+    position: absolute;
+}
+
+
+
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+
+@media (max-width: 1300px) {}
+
+@media (max-width: 768px) {
+    .tabsWrapper {
+        padding-top: 4rem;
+    }
+
+    .tabContent {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .tabNav {
+        gap: 2rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabNav::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .tabNav::-webkit-scrollbar-track {
+        background: transparent;
+
+    }
+
+    .tabNav::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 4px;
+    }
+
+    .tabNav {
+        padding-bottom: 1rem;
+        scrollbar-color: black transparent;
+        scrollbar-width: thin;
+    }
+
+    .right {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .tabNav {
+        justify-content: flex-start;
+    }
+
+    .RightDesc {
+        text-align: left;
+    }
+
+    .link {
+        color: #6524EB;
+        font-size: 18px;
+    }
+}

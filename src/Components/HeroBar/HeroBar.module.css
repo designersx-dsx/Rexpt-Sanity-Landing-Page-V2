@@ -1,29 +1,85 @@
+.HeroMain {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
 .heroBar {
-  margin-bottom: 1.5rem;
-}
-
-.title {
-  font-size: 90px;
-  font-weight: 700;
-  margin: 0;
-  color: #24252C;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: #24252C;
-  margin-top: 0.5rem;
-}
-
-/* alignment classes */
-.center {
+  margin-top: 10rem;
   text-align: center;
 }
 
-.left {
-  text-align: left;
+.title {
+  font-size: clamp(30px, 4.7vw, 90px);
+  font-family: 'Arbotek black';
+  line-height: 1;
+  font-weight: 700;
+  margin-inline: auto;
+  color: #24252C;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.right {
-  text-align: right;
+.subtitle {
+  font-size: 18px;
+  color: #24252C;
+  margin-top: 2rem;
+  width: 30%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Ellipse Animation */
+.Ellipse {
+  position: absolute;
+  top: -10%;
+  left: 0px;
+  animation: moveLeftRight 40s linear infinite;
+}
+
+.Ellipse img {
+  width: 450px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Keyframes moving left → right across parent */
+@keyframes moveLeftRight {
+  0% {
+    left: 0px;
+  }
+
+  50% {
+    left: calc(100%);
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@media(max-width:7000px) {
+  .subtitle {
+    width: 70%;
+  }
+}
+
+@media(max-width:650px) {
+  .title {
+    width: 100%;
+  }
+
+  .subtitle {
+    width: 100%;
+  }
 }
