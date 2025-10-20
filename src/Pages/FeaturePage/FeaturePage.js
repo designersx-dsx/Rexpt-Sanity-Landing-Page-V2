@@ -4,6 +4,8 @@ import Navbar from '../../Components/Navbar/Navbar'
 import SmarterReception from '../../Components/FeatureSection/SmarterReception/SmarterReception'
 import TabSection from '../../Components/FeatureSection/TabSection/TabSection'
 import CuttingEdge from '../../Components/FeatureSection/CuttingEdge/CuttingEdge'
+import PreCallFeature from '../../Components/FeatureSection/PreCallFeature/PreCallFeature'
+import PostCallFeature from '../../Components/FeatureSection/PostCallFeature/PostCallFeature'
 
 const FeaturePage = () => {
   return (
@@ -12,7 +14,9 @@ const FeaturePage = () => {
       <HeroBar title='Powerful Features for Smarter Reception' subtitle="Everything you need to automate, engage, and delight your customers with AI." />
       <SmarterReception/> 
       <TabSection/>
+      <PostCallFeature/>
       <CuttingEdge/>
+      <PreCallFeature/>
     </div>
   )
 }

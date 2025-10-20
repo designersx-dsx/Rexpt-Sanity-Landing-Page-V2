@@ -13,7 +13,7 @@
     margin-block: 1rem 1.5rem;
 }
 
-.LeftBar {
+.Left {
     width: 50%;
 }
 
@@ -31,7 +31,7 @@
     line-height: var(--title-line-height);
 }
 
-.RightBar {
+.Right {
     width: 50%;
     display: flex;
     align-items: center;
@@ -215,6 +215,11 @@
     top: -30%;
     left: 0;
     position: absolute;
+    width: 100%;
+}
+
+.EllipseImg2 {
+    width: 100%;
 }
 
 

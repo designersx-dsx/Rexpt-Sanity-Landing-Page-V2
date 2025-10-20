@@ -5,6 +5,7 @@ import TitleBar from '../../TitleBar/TitleBar';
 
 const NextLevelFeatures = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [active, setActive] = useState(null);
 
     const data1 = [
         { id: 1, title: "24/7 Call Handling", desc: "Automatically answer and manage incoming calls with natural voice responses and lead nurturing for your business 24/7.", icon: "/Svg/call-handling.svg", gradient: "linear-gradient(90deg, #DAC9FF 0%, #F6F2FF 100%)", borderColor: "#DAC9FF" },
@@ -25,6 +26,84 @@ const NextLevelFeatures = () => {
         { id: 10, title: "Seamless Integration", desc: "Design automated workflows tailored to your business needs.", icon: "/Svg/workflow.svg", gradient: "linear-gradient(90deg, #E1B5EE 0%, #FCF0FF 100%)", borderColor: "#E1B5EE" },
 
     ];
+
+    const features = [
+        {
+            id: 1, title: "24/7 Call Handling",
+            desc: "Automatically answer and manage incoming calls with natural voice responses and lead nurturing for your business 24/7.",
+            icon: "/Svg/call-handling.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #DAC9FF 0%, #F6F2FF 100%)",
+            borderColor: "#DAC9FF"
+        },
+        {
+            id: 2,
+            title: "Appointment Scheduling",
+            desc: "Automatically schedule and manage appointments seamlessly with AI-powered tools.",
+            icon: "/Svg/appointment-scheduling.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #FFCADE 0%, #FFEAF2 100%)",
+            borderColor: "#FFC5DB"
+        },
+        {
+            id: 3,
+            title: "Intelligent Call Routing / Transfer",
+            desc: "Route calls intelligently to the right department or person automatically.",
+            icon: "/Svg/call-transfer.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #FFF1AC 0%, #FFFAE2 100%)",
+            borderColor: "#FFF1AC"
+        },
+
+        {
+            id: 4,
+            title: "Lead Nurturing & Analysis",
+            desc: "Analyze and nurture leads effectively to grow your business.",
+            icon: "/Svg/lead-nurturing.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg,  #ABF4CF 0%, #E2F2EA 100%)",
+            borderColor: "#ABF4CF"
+        },
+        {
+            id: 5,
+            title: "Human-like Conversations at Scale",
+            desc: "Engage in realistic, human-like conversations.",
+            icon: "/Svg/human-like.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #D5EB94 0%,  #EFF5DE 100%)",
+            borderColor: "#D5EB94"
+        },
+        {
+            id: 6,
+            title: "AI Insights",
+            desc: "Get smart insights on customer behavior.",
+            icon: "/Svg/ai-insights.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #FFD1AE 0%, #F8E8DC 100%)",
+            borderColor: "#FFD1AE"
+        },
+        {
+            id: 7,
+            title: "Call History, Recording & Summary",
+            desc: "Connect with customers across multiple platforms seamlessly.",
+            icon: "/Svg/multichannel.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #ADEBF8 0%, #E8FBFF 100%)",
+            borderColor: "#ADEBF8"
+        },
+        {
+            id: 8,
+            title: "Analytics Dashboard",
+            desc: "Track and visualize all your calls and leads in one place.",
+            icon: "/Svg/analytics.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #FAE89E 0%, #FBF3D5 100%)",
+            borderColor: "#FAE89E"
+        },
+    ];
+
+
+
 
     const renderCard = (item) => {
 
@@ -99,6 +178,48 @@ const NextLevelFeatures = () => {
                     </div>
                     <div className={styles.gridFive}>
                         {data3.map((item) => renderCard(item))}
+                    </div>
+                </div>
+                <div className={styles.mobGridSection}>
+                    <div className={styles.wrapper}>
+                        {features.map((item, index) => {
+                            if (index % 2 !== 0) return null;
+
+                            return (
+                                <div key={index} className={styles.pairContainer}>
+                                    {[item, features[index + 1]].map((card, i) => {
+                                        if (!card) return null;
+                                        const cardIndex = index + i;
+                                        const isActive = active === cardIndex;
+                                        const isInactive =
+                                            active !== null &&
+                                            active !== cardIndex &&
+                                            Math.floor(active / 2) === Math.floor(cardIndex / 2);
+
+                                        return (
+                                            <div
+                                                key={card.id}
+                                                className={`${styles.card2} ${isActive ? styles.active : ""} ${isInactive ? styles.inactive : ""}`}
+                                                style={{
+                                                    background: card.gradient,
+                                                    border: `2px solid ${card.borderColor}`,
+                                                }}
+                                                onMouseEnter={() => setActive(cardIndex)}
+                                                onMouseLeave={() => setActive(null)}
+                                            >
+                                                <h3>{card.title}</h3>
+                                                {!isInactive && (
+                                                    <>
+                                                        <p>{card.desc}</p>
+                                                        <button>{card.btn}</button>
+                                                    </>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

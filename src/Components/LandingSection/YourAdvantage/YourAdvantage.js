@@ -84,6 +84,10 @@ const YourAdvantage = () => {
                             </div>
                         </div>
                     </div>
+                     <div className={styles.btnmob}>
+                        {/* <AnimatedBtn text2="Join" logo="/Svg/rexpt-logo2.svg" shapeType="alt"/> */}
+                        <img src="/Svg/join-btn2.svg" alt="join-btn2"/>
+                    </div>
                 </div>
             </div>
         </>

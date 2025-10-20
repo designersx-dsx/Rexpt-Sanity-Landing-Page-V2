@@ -246,7 +246,9 @@
 @media(max-width:600px) {
     .controls {
         padding: 0rem;
-        flex-direction: column-reverse;
         margin-top: 1rem;
+    }
+    .btn img{
+        width: 80%;
     }
 }
