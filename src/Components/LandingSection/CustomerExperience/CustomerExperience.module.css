@@ -196,6 +196,10 @@
     color: #25242C;
 }
 
+.mobform {
+    display: none;
+}
+
 @media(max-width:1820px) {
     .LeftBar {
         width: 50%;
@@ -231,9 +235,10 @@
     }
 
     .ForestImg {
-        height: 60dvh;
+        height: 70dvh;
     }
-    .scroller img{
+
+    .scroller img {
         height: 60dvh;
     }
 
@@ -248,7 +253,60 @@
     .card {
         padding: 0px;
         border-radius: 20px;
+        display: none;
     }
+
+    .mobform {
+        display: block;
+    }
+
+    .formContainer {
+
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    h2,
+    p {
+        margin-bottom: 0.8rem;
+        color: #1a1a1a;
+        font-weight: 500;
+    }
+
+    .dashedInput {
+        width: 100%;
+        border: none;
+        border-bottom: 2px dashed #888;
+        background: transparent;
+        outline: none;
+        font-size: 1rem;
+        color: #000;
+        text-align: center;
+        padding: 0.4rem 0;
+        transition: all 0.3s ease;
+    }
+
+    .dashedInput::placeholder {
+        color: #bbb;
+        text-align: center;
+    }
+
+    .dashedInput:focus {
+        border-bottom-color: #6a00ff;
+        color: #000;
+    }
+
+.btnMob{
+    margin-top: 10px;
+    width: 85%;
+    margin-inline: auto;
+}
+
 
     .BottomSection {
         top: 35%;
