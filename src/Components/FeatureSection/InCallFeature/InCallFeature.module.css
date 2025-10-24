@@ -1,0 +1,146 @@
+.containerBox {
+    width: 100%;
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 20px;
+   
+}
+
+.TitleSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+     position: sticky;
+    top: 12%;
+}
+
+.container {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.containerBox {
+    width: 100%;
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 20px;
+}
+
+.TitleSection {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.scrollContainer {
+    position: relative;
+    height: 400vh;
+    /* total scroll height */
+}
+
+.stickyWrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* each section (funnel + text) */
+.section {
+    position: sticky;
+    width: 100%;
+    
+    background: #ffffff00;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+    border-radius: 16px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.8s ease;
+    
+    
+}
+
+/* Funnel Design */
+.funnel {
+    flex: 1;
+    max-width: 400px;
+    background: linear-gradient(135deg, #a06cd5, #5f25a4);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    transition: transform 0.8s ease;
+}
+
+.funnel1 {
+    height: 100px;
+}
+
+.funnel2 {
+    height: 100px;
+}
+
+.funnel3 {
+    height: 100px;
+}
+
+.funnel4 {
+    height: 100px;
+}
+
+.text {
+    flex: 1;
+    padding-right: 2rem;
+    background-image: linear-gradient(90deg, #FFFFFF,#E5D9FF, #6524EB);
+    padding: 15px;
+}
+
+.text h2 {
+    font-size: 2rem;
+    color: #25242C;
+    
+}
+
+.text p {
+    font-size: 1.1rem;
+    color: #25242C;
+    margin: 0;
+}
+.FunnelShape{
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    right: 0;
+}
+
+.funnelImg1 { width: 80%; height: 50%; }
+.funnelImg2 { width: 60%; height: 50%; }
+.funnelImg3 { width: 45%; height: 50%; }
+.funnelImg4 { width: 35%; height: 50%; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .text {
+        padding-right: 0;
+    }
+
+    .funnel {
+        margin-top: 1.5rem;
+        width: 80%;
+    }
+
+    .text h2 {
+        font-size: 1.4rem;
+    }
+}
