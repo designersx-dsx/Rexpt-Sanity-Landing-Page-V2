@@ -9,7 +9,7 @@ const PostCallFeature = () => {
                 <TitleBar
                     subTitle="Additional "
                     spanText="Features"
-                    title="Pre-Call Features"
+                    title="Post-Call Features"
                 />
             </div>
             <div className={styles.container}>
@@ -17,7 +17,7 @@ const PostCallFeature = () => {
                 <div className={styles.leftCard}>
                     <h2>Seamless Voice Capture</h2>
                     <p>
-                        usually refers to real-time voice recording/capture during the call.
+                        Our system provides real-time lossless voice recording/capture during the call.
                     </p>
 
                     <div className={styles.waveContainer}>
@@ -62,6 +62,40 @@ const PostCallFeature = () => {
                                 <strong>Agent:</strong> Sure, I can assist you with that.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.container2}>
+                {/* Right Card */}
+                <div className={styles.rightCard}>
+                    <h2>Follow-Up Reminders</h2>
+                    <p>Get notifications to follow up with leads after each call.</p>
+
+                    <div className={styles.bellDiv}>
+                        <img src='/Svg/follow-up-icon.svg' alt='follow-up-icon' />
+                    </div>
+
+                </div>
+                {/* Left Card */}
+                <div className={styles.leftCard}>
+                    <h2>Call Recording</h2>
+                    <p>
+                        Automatically record all incoming calls, allowing you to review conversations, track customer interactions, and ensure no detail is missed.
+                    </p>
+
+                    <div className={styles.waveContainer}>
+
+
+                        <div className={styles.waveform}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+
                     </div>
                 </div>
             </div>

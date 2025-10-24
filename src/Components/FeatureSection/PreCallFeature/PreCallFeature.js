@@ -28,31 +28,41 @@ const cardsData = [
 
 const PreCallFeature = () => {
     return (
-        <div className={styles.containerBox}>
-            <div className={styles.TitleSection}>
-                <TitleBar
-                    subTitle="Additional "
-                    spanText="Features"
-                    title="Pre-Call Features"
-                />
-            </div>
-            <div className={styles.container}>
-                <section className={styles.section}>
-                    <div className={styles.cardsWrapper}>
-                        {cardsData.map((card, i) => (
-                            <div key={i} className={styles.card}>
-                                <div className={styles.text}>
-                                    <h3>{card.title}</h3>
-                                   
+        <div className={styles.MianDiv}>
+
+            <div className={styles.containerBox}>
+                <div className={styles.TitleSection}>
+                    <TitleBar
+                        subTitle="Additional "
+                        spanText="Features"
+                        title="Pre-Built CRM Features"
+                    />
+                </div>
+                <div className={styles.container}>
+                    <section className={styles.section}>
+                        <div className={styles.cardsWrapper}>
+                            {cardsData.map((card, i) => (
+                                <div key={i} className={styles.card}>
+                                    <div className={styles.text}>
+                                        <h3>{card.title}</h3>
+
+                                    </div>
+                                    <div className={styles.descP}><p>{card.desc}</p></div>
+                                    <div className={styles.imgWrapper}>
+                                        <img src={card.img} alt={card.title} />
+                                    </div>
                                 </div>
-                                <div className={styles.descP}><p>{card.desc}</p></div>
-                                <div className={styles.imgWrapper}>
-                                    <img src={card.img} alt={card.title} />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                            ))}
+                        </div>
+                    </section>
+                    
+                </div>
+                
+                <div className={styles.ocean}>
+                    <div className={styles.wave}></div>
+                    <div className={styles.wave}></div>
+                    <div className={styles.wave}></div>
+                </div>
             </div>
         </div>
     )
