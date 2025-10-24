@@ -43,40 +43,44 @@ const InCallFeature = () => {
     const startTop = 35; // was 25 earlier → increased to move lower
     const targetTops = sections.map((_, i) => startTop + i * gap);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const container = containerRef.current;
-            if (!container) return;
+useEffect(() => {
+    const handleScroll = () => {
+        const container = containerRef.current;
+        if (!container) return;
 
-            const rect = container.getBoundingClientRect();
-            const scrollY = -rect.top;
-            const containerHeight = rect.height - window.innerHeight;
+        const rect = container.getBoundingClientRect();
+        const scrollY = -rect.top;
+        const containerHeight = rect.height - window.innerHeight;
 
-            const newTops = [...sectionTops];
-            const newReleased = [...releasedSections];
+        const newTops = [...sectionTops];
+        const newReleased = [...releasedSections];
+        const lockPoint = containerHeight * 0.8; // 80% scroll = all funnels locked
 
-            sections.forEach((_, i) => {
-                const sectionStart = (i * containerHeight) / sections.length;
-                const sectionEnd = ((i + 1) * containerHeight) / sections.length;
+        sections.forEach((_, i) => {
+            const sectionStart = (i * lockPoint) / sections.length;
+            const sectionEnd = ((i + 1) * lockPoint) / sections.length;
 
-                let progress = (scrollY - sectionStart) / (sectionEnd - sectionStart);
-                progress = Math.min(Math.max(progress, 0), 1);
+            let progress = (scrollY - sectionStart) / (sectionEnd - sectionStart);
+            progress = Math.min(Math.max(progress, 0), 1);
 
-                const newTop = 100 - (100 - targetTops[i]) * progress;
-                newTops[i] = newTop;
+            const newTop = 100 - (100 - targetTops[i]) * progress;
+            newTops[i] = newTop;
 
-                if (progress >= 1 && !newReleased[i]) newReleased[i] = true;
-                else if (progress < 1 && newReleased[i]) newReleased[i] = false;
-            });
+            if (progress >= 1 && !newReleased[i]) newReleased[i] = true;
+            else if (progress < 1 && newReleased[i]) newReleased[i] = false;
+        });
 
-            setSectionTops(newTops);
-            setReleasedSections(newReleased);
-        };
+        setSectionTops(newTops);
+        setReleasedSections(newReleased);
+    };
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [sections.length]);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+}, [sections.length]);
+
+
+
 
     return (
         <div className={styles.containerBox}>
