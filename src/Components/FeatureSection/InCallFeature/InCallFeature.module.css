@@ -96,8 +96,10 @@
 .text {
     flex: 1;
     padding-right: 2rem;
-    background-image: linear-gradient(90deg, #FFFFFF,#E5D9FF, #6524EB);
+    background-image: linear-gradient(150deg, #FFFFFF,#E5D9FF, #6524EB);
     padding: 15px;
+    position: absolute;
+    width: 70%;
 }
 
 .text h2 {

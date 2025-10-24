@@ -4,16 +4,44 @@ import TitleBar from "../../TitleBar/TitleBar";
 
 const InCallFeature = () => {
     const sections = [
-        { title: "24×7 Availability", desc: "After-hours availability, policies & schedules.", img: "/Svg/Funnel01.svg" },
-        { title: "Concurrent Calls", desc: "Parallel Call Answering and management", img: "/Svg/Funnel02.svg" },
-        { title: "Multilingual Switching", desc: "In-call switching to user preferred language", img: "/Svg/Funnel03.svg" },
-        { title: "Smart Call Routing", desc: "Warm call Transfers or Bookings", img: "/Svg/Funnel04.svg" },
+        { 
+            title: "24×7 Availability", 
+            desc: "After-hours availability, policies & schedules.", 
+            img: "/Svg/Funnel01.svg",
+            textWidth: "70%",
+            leftOffset: "10%"
+        },
+        { 
+            title: "Concurrent Calls", 
+            desc: "Parallel Call Answering and management", 
+            img: "/Svg/Funnel02.svg",
+            textWidth: "65%",
+            leftOffset: "15%"
+        },
+        { 
+            title: "Multilingual Switching", 
+            desc: "In-call switching to user preferred language", 
+            img: "/Svg/Funnel03.svg",
+            textWidth: "60%",
+            leftOffset: "20%"
+        },
+        { 
+            title: "Smart Call Routing", 
+            desc: "Warm call Transfers or Bookings", 
+            img: "/Svg/Funnel04.svg",
+            textWidth: "55%",
+            leftOffset: "25%"
+        },
     ];
 
     const containerRef = useRef(null);
-    const [sectionTops, setSectionTops] = useState([100, 100, 100, 100]); // initial bottom
+    const [sectionTops, setSectionTops] = useState(Array(sections.length).fill(100));
+    const [releasedSections, setReleasedSections] = useState(Array(sections.length).fill(false));
 
-    const targetTops = [25, 40, 55, 65]; // target top positions in %
+    // 🧩 Adjusted to move funnels downward
+    const gap = 15;      // gap between funnels
+    const startTop = 35; // was 25 earlier → increased to move lower
+    const targetTops = sections.map((_, i) => startTop + i * gap);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,22 +49,32 @@ const InCallFeature = () => {
             if (!container) return;
 
             const rect = container.getBoundingClientRect();
-            const scrollY = -rect.top; // amount scrolled inside container
+            const scrollY = -rect.top;
             const containerHeight = rect.height - window.innerHeight;
 
-            const newTops = sections.map((_, i) => {
+            const newTops = [...sectionTops];
+            const newReleased = [...releasedSections];
+
+            sections.forEach((_, i) => {
                 const sectionStart = (i * containerHeight) / sections.length;
                 const sectionEnd = ((i + 1) * containerHeight) / sections.length;
+
                 let progress = (scrollY - sectionStart) / (sectionEnd - sectionStart);
-                progress = Math.min(Math.max(progress, 0), 1); // clamp 0-1
-                return 100 - (100 - targetTops[i]) * progress; // move from 100% → targetTop%
+                progress = Math.min(Math.max(progress, 0), 1);
+
+                const newTop = 100 - (100 - targetTops[i]) * progress;
+                newTops[i] = newTop;
+
+                if (progress >= 1 && !newReleased[i]) newReleased[i] = true;
+                else if (progress < 1 && newReleased[i]) newReleased[i] = false;
             });
 
             setSectionTops(newTops);
+            setReleasedSections(newReleased);
         };
 
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // initial call
+        handleScroll();
         return () => window.removeEventListener("scroll", handleScroll);
     }, [sections.length]);
 
@@ -51,24 +89,29 @@ const InCallFeature = () => {
                     {sections.map((sec, i) => (
                         <div
                             key={i}
-                            className={styles.section}
+                            className={`${styles.section} ${releasedSections[i] ? styles.released : ""}`}
                             style={{
                                 zIndex: sections.length - i,
                                 top: `${sectionTops[i]}%`,
                                 opacity: sectionTops[i] < 100 ? 1 : 0,
-                                transform: `translateY(${sectionTops[i] < 100 ? 0 : 50}px) scale(${sectionTops[i] < 100 ? 1 : 0.9})`,
+                                transform: `translateY(${sectionTops[i] < 100 ? 0 : 30}px) scale(${sectionTops[i] < 100 ? 1 : 0.95})`,
+                                transition: "top 0.6s ease-out, transform 0.6s ease-out, opacity 0.4s ease",
                             }}
                         >
-                            <div className={styles.text}>
+                            <div 
+                                className={styles.text}
+                                style={{ 
+                                    width: sec.textWidth, 
+                                    left: sec.leftOffset
+                                }}
+                            >
                                 <h2>{sec.title}</h2>
                                 <p>{sec.desc}</p>
                             </div>
-                           <div className={styles.FunnelShape}>
-  <img src={sec.img} className={styles[`funnelImg${i+1}`]} />
-</div>
-                            {/* <div className={`${styles.funnel} ${styles[`funnel${i + 1}`]}`}>
-                                
-                            </div> */}
+
+                            <div className={styles.FunnelShape}>
+                                <img src={sec.img} className={styles[`funnelImg${i + 1}`]} />
+                            </div>
                         </div>
                     ))}
                 </div>
