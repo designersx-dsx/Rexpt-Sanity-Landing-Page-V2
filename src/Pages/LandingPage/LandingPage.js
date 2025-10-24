@@ -18,6 +18,7 @@ const LandingPage = () => {
             <MarqueeSlider />
             <AutomateTab />
             <NextLevelFeatures />
+            
             <SliderSection />
             <YourAdvantage />
             <ClientsSay />

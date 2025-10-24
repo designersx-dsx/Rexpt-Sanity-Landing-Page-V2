@@ -1,0 +1,340 @@
+.containerBox {
+    width: 100%;
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 20px;
+}
+
+.TitleSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+
+/* .leftCard,
+.rightCard {
+    background-color: #EEF1F0;
+    border-radius: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+/* Left Card */
+.leftCard {
+    width: 70%;
+    /* left card 70% */
+    position: relative;
+    background-color: #EEF1F0;
+    border-radius: 40px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* Right Card */
+.rightCard {
+    width: 30%;
+    /* right card 30% */
+    background-color: #EEF1F0;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.leftCard p,
+.rightCard p {
+    color: #818181;
+}
+
+/* Wave container and circles */
+.waveContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(100, 50, 255, 0.3);
+}
+
+.centerLogo img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Concentric Circles */
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(120, 50, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Tooltips */
+.tooltip {
+    position: absolute;
+    background: #6b3eff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    opacity: 0;
+    animation: fade 8s infinite;
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    10%,
+    40% {
+        opacity: 1;
+    }
+}
+
+.tooltip1 {
+    top: 15%;
+    left: 0%;
+    animation-delay: 0s;
+}
+
+.tooltip2 {
+    top: 45%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.tooltip3 {
+    top: 75%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+.tooltip4 {
+    top: 25%;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+.tooltip5 {
+    top: 55%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+.tooltip6 {
+    top: 80%;
+    right: 10%;
+    animation-delay: 5s;
+}
+
+/* Chat Box */
+.chatBox {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 3.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 250px;
+    margin-inline: auto;
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: #6524EB;
+    padding: 6px 20px;
+    border-radius: 10px;
+    width: max-content;
+    margin-bottom: 10px;
+}
+
+.waveform::before,
+.waveform::after,
+.waveform span {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 3px;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scaleY(0.4);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.chatDetails p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+
+.container2 {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.bellDiv {
+    text-align: center;
+}
+
+.callTranscription {
+    background-color: #ffff;
+    width: max-content;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.callTransDiv {
+    position: relative;
+    width: max-content;
+
+}
+
+.waveform2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: #6524EB;
+    padding: 6px 20px;
+    border-radius: 10px;
+    width: max-content;
+    position: absolute;
+    top: 15%;
+    left: 85%;
+}
+
+.waveform2::before,
+.waveform2::after,
+.waveform2 span {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 3px;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .leftCard,
+    .rightCard {
+        width: unset;
+    }
+
+    .waveContainer {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width:650px) {
+    .waveContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .waveform2 {
+        display: none;
+    }
+
+    .tooltip3 {
+        left: -10%;
+        animation-delay: 4s;
+    }
+
+    .chatBox {
+        align-items: center;
+    }
+
+    .chatDetails {
+        display: none;
+    }
+
+    .waveform {
+        margin-bottom: 0px;
+    }
+}

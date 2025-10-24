@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../CustomerExperience/CustomerExperience.module.css'
 import TitleBar from '../../TitleBar/TitleBar'
 import AnimatedBtn from '../../AnimatedBtn/AnimatedBtn'
+import MobForm from './MobForm'
 const CustomerExperience = () => {
 
 
@@ -64,6 +65,9 @@ const CustomerExperience = () => {
                             <div className={styles.btn}>
                                 <AnimatedBtn text='Get Started +' fontFamily="Arboria Medium" />
                             </div>
+                        </div>
+                        <div className={styles.mobform}>
+                            <MobForm />
                         </div>
                     </div>
                 </div>

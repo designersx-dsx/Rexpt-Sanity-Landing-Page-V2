@@ -134,6 +134,14 @@
     display: none;
 }
 
+.mobGridSection {
+    display: none;
+}
+
+.wrapper {
+    display: none;
+}
+
 @media(max-width:1200px) {
 
     .specialCard {
@@ -213,18 +221,155 @@
     }
 }
 
+
+
 @media(max-width:650px) {
     .containerBox {
         padding: 4rem 20px 0px 20px;
+    }
+
+    .titleRow {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .titleRow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    .titleRow2 h3 {
+        min-height: 72px;
+    }
+
+    .cardIcon {
+        object-fit: contain;
+        height: 60px;
+        width: 60px;
+
+    }
+
+    .active .cardIcon {
+        opacity: 0;
+        pointer-events: none;
     }
 
     .GridSection {
         padding: 1rem;
         border-radius: 10px;
         margin-top: 1rem;
+        display: none;
+    }
+
+    .mobGridSection {
+        display: block;
     }
 
     .specialTitle2 {
         margin-top: 2rem;
+    }
+
+    /* Hide on desktop and show only below 650px */
+
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 10px;
+    }
+
+    .pairContainer {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        height: 230px;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+
+    .card2 {
+        flex: 1;
+        background: #f4f6f9;
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        padding: 15px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .card2 h3 {
+        font-size: 20px;
+        word-break: break-all;
+        font-weight: 600;
+        transition: opacity 0.3s ease;
+        /* min-height: 50px; */
+    }
+
+    .card2 p {
+        font-size: 16px;
+        margin-top: 6px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .card2 button {
+        margin-top: 10px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        background: #ffffff;
+        color: #24252C;
+        font-size: 18px;
+        cursor: pointer;
+        width: max-content;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-weight: 600;
+    }
+
+    /* Default equal size */
+    .pairContainer .card2 {
+        flex-basis: 50%;
+    }
+
+    /* Active expands */
+    .pairContainer .card2.active {
+        flex-basis: 90%;
+        background: #fff;
+
+    }
+
+    /* Inactive shrinks */
+    .pairContainer .card2.inactive {
+        flex-basis: 10%;
+        opacity: 0.4;
+    }
+
+    /* Active content visible */
+    .pairContainer .card2.active p,
+    .pairContainer .card2.active button {
+        opacity: 1;
+    }
+
+    /* Hide content for inactive */
+    .pairContainer .card2.inactive h3,
+    .pairContainer .card2.inactive p,
+    .pairContainer .card2.inactive button {
+        opacity: 0;
+    }
+}
+
+@media (max-width:400px) {
+    .titleRow2 h3 {
+        font-size: 18px;
     }
 }

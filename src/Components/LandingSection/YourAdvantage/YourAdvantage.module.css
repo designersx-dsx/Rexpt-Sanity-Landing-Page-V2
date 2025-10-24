@@ -257,8 +257,11 @@
     color: #333;
     cursor: pointer;
     font-weight: 600;
+    display: block;
 }
-
+.btnmob{
+    display: none;
+}
 /* 📱 Tablet / Mobile (900px and below) */
 
 @media (max-width: 900px) {
@@ -350,4 +353,43 @@
     .cardPrimary .subText {
         width: 100%;
     }
+
+    
+/* Button base */
+.btnmob {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    /* button shape */
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+/* Hover scale */
+.btnmob:hover {
+    transform: scale(1.05);
+}
+
+/* Gradient shine */
+.btnmob::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.7s ease;
+}
+
+/* Move shine on hover */
+.btnmob:hover::before {
+    left: 125%;
+}
 }
