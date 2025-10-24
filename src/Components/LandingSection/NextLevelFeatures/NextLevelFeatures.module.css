@@ -228,6 +228,38 @@
         padding: 4rem 20px 0px 20px;
     }
 
+    .titleRow {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .titleRow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    .titleRow2 h3 {
+        min-height: 72px;
+    }
+
+    .cardIcon {
+        object-fit: contain;
+        height: 60px;
+        width: 60px;
+
+    }
+
+    .active .cardIcon {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     .GridSection {
         padding: 1rem;
         border-radius: 10px;
@@ -279,6 +311,7 @@
         word-break: break-all;
         font-weight: 600;
         transition: opacity 0.3s ease;
+        /* min-height: 50px; */
     }
 
     .card2 p {
@@ -332,5 +365,11 @@
     .pairContainer .card2.inactive p,
     .pairContainer .card2.inactive button {
         opacity: 0;
+    }
+}
+
+@media (max-width:400px) {
+    .titleRow2 h3 {
+        font-size: 18px;
     }
 }

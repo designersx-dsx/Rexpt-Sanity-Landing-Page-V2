@@ -47,16 +47,6 @@ const NextLevelFeatures = () => {
         },
         {
             id: 3,
-            title: "Intelligent Call Routing / Transfer",
-            desc: "Route calls intelligently to the right department or person automatically.",
-            icon: "/Svg/call-transfer.svg",
-            btn: "Book a Demo",
-            gradient: "linear-gradient(90deg, #FFF1AC 0%, #FFFAE2 100%)",
-            borderColor: "#FFF1AC"
-        },
-
-        {
-            id: 4,
             title: "Lead Nurturing & Analysis",
             desc: "Analyze and nurture leads effectively to grow your business.",
             icon: "/Svg/lead-nurturing.svg",
@@ -65,7 +55,7 @@ const NextLevelFeatures = () => {
             borderColor: "#ABF4CF"
         },
         {
-            id: 5,
+            id: 4,
             title: "Human-like Conversations at Scale",
             desc: "Engage in realistic, human-like conversations.",
             icon: "/Svg/human-like.svg",
@@ -74,8 +64,8 @@ const NextLevelFeatures = () => {
             borderColor: "#D5EB94"
         },
         {
-            id: 6,
-            title: "AI Insights",
+            id: 5,
+            title: "Spam & Profanity Filtration",
             desc: "Get smart insights on customer behavior.",
             icon: "/Svg/ai-insights.svg",
             btn: "Book a Demo",
@@ -83,7 +73,7 @@ const NextLevelFeatures = () => {
             borderColor: "#FFD1AE"
         },
         {
-            id: 7,
+            id: 6,
             title: "Call History, Recording & Summary",
             desc: "Connect with customers across multiple platforms seamlessly.",
             icon: "/Svg/multichannel.svg",
@@ -91,15 +81,27 @@ const NextLevelFeatures = () => {
             gradient: "linear-gradient(90deg, #ADEBF8 0%, #E8FBFF 100%)",
             borderColor: "#ADEBF8"
         },
+
         {
-            id: 8,
-            title: "Analytics Dashboard",
+            id: 7,
+            title: "Agent Characterization",
             desc: "Track and visualize all your calls and leads in one place.",
             icon: "/Svg/analytics.svg",
             btn: "Book a Demo",
             gradient: "linear-gradient(90deg, #FAE89E 0%, #FBF3D5 100%)",
             borderColor: "#FAE89E"
         },
+        {
+            id: 8,
+            title: "Seamless Integration",
+            desc: "Design automated workflows tailored to your business needs.",
+            icon: "/Svg/workflow.svg",
+            btn: "Book a Demo",
+            gradient: "linear-gradient(90deg, #E1B5EE 0%, #FCF0FF 100%)",
+            borderColor: "#E1B5EE"
+        },
+
+
     ];
 
 
@@ -180,6 +182,7 @@ const NextLevelFeatures = () => {
                         {data3.map((item) => renderCard(item))}
                     </div>
                 </div>
+
                 <div className={styles.mobGridSection}>
                     <div className={styles.wrapper}>
                         {features.map((item, index) => {
@@ -207,7 +210,18 @@ const NextLevelFeatures = () => {
                                                 onMouseEnter={() => setActive(cardIndex)}
                                                 onMouseLeave={() => setActive(null)}
                                             >
-                                                <h3>{card.title}</h3>
+                                                {/* Title + Icon */}
+                                                {!isInactive && (
+                                                    <div className={isActive ? styles.titleRow : styles.titleRow2}>
+                                                        <h3>{card.title}</h3>
+                                                      
+                                                        {!isActive && card.icon && (
+                                                            <img src={card.icon} alt="icon" className={styles.cardIcon} />
+                                                        )}
+                                                    </div>
+                                                )}
+
+                                                {/* Description + Button */}
                                                 {!isInactive && (
                                                     <>
                                                         <p>{card.desc}</p>
@@ -222,6 +236,8 @@ const NextLevelFeatures = () => {
                         })}
                     </div>
                 </div>
+
+
             </div>
         </div>
     );
