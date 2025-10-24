@@ -144,6 +144,7 @@
 @media (max-width: 768px) {
     .card {
         min-height: 350px;
+        
     }
 
 
@@ -153,6 +154,12 @@
     .cardsWrapper {
         grid-template-columns: 1fr;
     }
+    .ocean{
+        /* display: none; */
+    }
+        .card {
+            max-height: 200px;
+        }
 
 
 }

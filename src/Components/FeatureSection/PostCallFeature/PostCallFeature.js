@@ -28,7 +28,7 @@ const PostCallFeature = () => {
                         {/* Animated Tooltips */}
                         <div className={`${styles.tooltip} ${styles.tooltip1}`}>Do not forget to check</div>
                         <div className={`${styles.tooltip} ${styles.tooltip2}`}>Ok, Fine</div>
-                        <div className={`${styles.tooltip} ${styles.tooltip3}`}>My takeaway dinner</div>
+                        <div className={`${styles.tooltip} ${styles.tooltip3}`}>Can you book a Meeting?</div>
                         <div className={`${styles.tooltip} ${styles.tooltip4}`}>Wait. Let you know</div>
                         <div className={`${styles.tooltip} ${styles.tooltip5}`}>Hmm, Sofia</div>
                         <div className={`${styles.tooltip} ${styles.tooltip6}`}>Ask again</div>
@@ -46,14 +46,14 @@ const PostCallFeature = () => {
                     <p>Automatically convert calls into text for easy review.</p>
 
                     <div className={styles.chatBox}>
-                        <div className={styles.waveform}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                      <div className={styles.waveform}>
+                                {[...Array(20)].map((_, i) => (
+                                    <span
+                                        key={i}
+                                        style={{ animationDelay: `${i * 0.1}s` }} // 0s, 0.1s, 0.2s ...
+                                    ></span>
+                                ))}
+                            </div>
                         <div className={styles.chatDetails}>
                             <p>
                                 <strong>Customer:</strong> Hi, I need help with my order.
@@ -84,16 +84,21 @@ const PostCallFeature = () => {
                     </p>
 
                     <div className={styles.waveContainer}>
+                        <div className={styles.callTransDiv}>
+                            <div className={styles.callTranscription}>
+                                <img src='/Svg/call-transcription-icon.svg' alt='call-transcription-icon' />
+                            </div>
 
-
-                        <div className={styles.waveform}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <div className={styles.waveform2}>
+                                {[...Array(30)].map((_, i) => (
+                                    <span
+                                        key={i}
+                                        style={{ animationDelay: `${i * 0.1}s` }} // 0s, 0.1s, 0.2s ...
+                                    ></span>
+                                ))}
+                            </div>
                         </div>
+
 
 
                     </div>

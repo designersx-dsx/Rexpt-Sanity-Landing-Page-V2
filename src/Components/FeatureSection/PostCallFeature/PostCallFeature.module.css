@@ -34,7 +34,8 @@
 
 /* Left Card */
 .leftCard {
-    width: 70%; /* left card 70% */
+    width: 70%;
+    /* left card 70% */
     position: relative;
     background-color: #EEF1F0;
     border-radius: 40px;
@@ -44,14 +45,17 @@
 
 /* Right Card */
 .rightCard {
-    width: 30%; /* right card 30% */
+    width: 30%;
+    /* right card 30% */
     background-color: #EEF1F0;
     border-radius: 20px;
     padding: 40px;
     text-align: left;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
-.leftCard p, .rightCard p{
+
+.leftCard p,
+.rightCard p {
     color: #818181;
 }
 
@@ -178,7 +182,7 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 250px;
     margin-inline: auto;
@@ -188,11 +192,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
     background-color: #6524EB;
-    padding: 10px 20px;
+    padding: 6px 20px;
     border-radius: 10px;
-    width: 70%;
+    width: max-content;
+    margin-bottom: 10px;
 }
 
 .waveform::before,
@@ -200,36 +205,13 @@
 .waveform span {
     content: "";
     display: block;
-    width: 4px;
-    height: 15px;
+    width: 2px;
+    height: 20px;
     background: #ffffff;
     border-radius: 3px;
     animation: bounce 1s infinite ease-in-out;
 }
 
-.waveform span:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.waveform span:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.waveform span:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.waveform span:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-.waveform span:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
-.waveform span:nth-child(6) {
-    animation-delay: 0.5s;
-}
 
 @keyframes bounce {
 
@@ -259,12 +241,61 @@
     justify-content: space-between;
     align-items: stretch;
 }
-.bellDiv{
+
+.bellDiv {
     text-align: center;
 }
+
+.callTranscription {
+    background-color: #ffff;
+    width: max-content;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.callTransDiv {
+    position: relative;
+    width: max-content;
+
+}
+
+.waveform2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: #6524EB;
+    padding: 6px 20px;
+    border-radius: 10px;
+    width: max-content;
+    position: absolute;
+    top: 15%;
+    left: 85%;
+}
+
+.waveform2::before,
+.waveform2::after,
+.waveform2 span {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 3px;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+
+
 /* Responsive */
 @media (max-width: 900px) {
     .container {
+        flex-direction: column;
+    }
+
+    .container2 {
         flex-direction: column;
     }
 
@@ -276,5 +307,34 @@
     .waveContainer {
         width: 250px;
         height: 250px;
+    }
+}
+
+@media (max-width:650px) {
+    .waveContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .waveform2 {
+        display: none;
+    }
+
+    .tooltip3 {
+        left: -10%;
+        animation-delay: 4s;
+    }
+
+    .chatBox {
+        align-items: center;
+    }
+
+    .chatDetails {
+        display: none;
+    }
+
+    .waveform {
+        margin-bottom: 0px;
     }
 }

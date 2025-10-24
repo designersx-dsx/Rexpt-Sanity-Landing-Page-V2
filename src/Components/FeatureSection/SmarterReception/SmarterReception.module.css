@@ -261,10 +261,13 @@
     color: #24252C;
 }
 
+.MobSmarterDiv {
+    display: none;
+}
 
 @media(max-width:1000px) {
     .container {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     .videoContainer {
@@ -277,6 +280,7 @@
 
     .SecondtCard {
         width: 65%;
+        display: none;
     }
 
     .ThirdtCard {
@@ -285,6 +289,14 @@
 }
 
 @media(max-width:650px) {
+    .MobSmarterDiv {
+        display: block;
+    }
+
+    .container {
+        display: none;
+    }
+
     .FirstCard {
         width: 100%;
     }

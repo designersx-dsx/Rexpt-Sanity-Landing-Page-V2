@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../SmarterReception/SmarterReception.module.css'
 import AnimatedBtn from '../../AnimatedBtn/AnimatedBtn'
+import MobSmarter from './MobSmarter'
 
 const SmarterReception = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -75,6 +76,9 @@ const SmarterReception = () => {
                         <h3>Analytics & Reports</h3>
                     </div>
                 </div>
+            </div>
+            <div className={styles.MobSmarterDiv}>
+                <MobSmarter />
             </div>
         </div>
     )

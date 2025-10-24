@@ -17,8 +17,8 @@ const TabSection = () => {
 
             buttonText: "View the Demo",
             img: "/Images/rexpt-app.png",
-            ellips1: "/Svg/Ellipse-green-dark.svg",
-            ellips2: "/Svg/Ellipse-yellow.svg",
+            // ellips1: "/Svg/Ellipse-green-dark.svg",
+
 
         },
         {
@@ -33,7 +33,8 @@ const TabSection = () => {
                 "Lead Scan helps you capture and qualify leads faster, improving your sales efficiency and closing rates.",
 
             buttonText: "Start Scanning",
-            img: "/Images/Qualify-Lead.png"
+            img: "/Images/Qualify-Lead.png",
+            // ellips1: "/Svg/Ellipse-green-dark.svg",
         },
         {
             title: "Admin Panel",
@@ -47,7 +48,8 @@ const TabSection = () => {
                 "Provide round-the-clock support without burning out your team. Our hybrid model ensures every inquiry is answered.",
 
             buttonText: "Go Live Now",
-            img: "/Images/24Live.png"
+            img: "/Images/24Live.png",
+            // ellips1: "/Svg/Ellipse-green-dark.svg",
         },
 
 
@@ -104,7 +106,7 @@ const TabSection = () => {
 
                     <div className={styles.EllopsDiv}>
                         <img className={styles.EllipseImg1} src={tabData[activeTab].ellips1} alt='ellips3' />
-                        <img className={styles.EllipseImg2} src={tabData[activeTab].ellips2} alt='ellips2' />
+
 
                     </div>
                 </div>
